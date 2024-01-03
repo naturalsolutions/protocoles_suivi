@@ -1,0 +1,5 @@
+{
+  "module_label": "Suivi de mortalité",
+  "module_desc": "Portocole de suivi de mortalité des chiroptères",
+  "display_properties": ["module_label", "module_desc"]
+}
