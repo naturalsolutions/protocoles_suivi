@@ -37,7 +37,14 @@ visits AS (
 		id_digitiser,
 		visit_date_min AS date_min,
 		COALESCE (visit_date_max, visit_date_min) AS date_max,
-		comments
+		comments,
+		(
+			case
+				when visitecompl.data->'id_nomenclature_tech_collect_campanule'::text = 'null' then '314' --non renseigné
+				else visitecompl.data->'id_nomenclature_tech_collect_campanule'::text
+			end
+		)::int as id_nomenclature_tech_collect_campanule,
+		id_nomenclature_grp_typ
 	FROM gn_monitoring.t_base_visits
 		JOIN gn_monitoring.t_visit_complements visitecompl using(id_base_visit)
 ),

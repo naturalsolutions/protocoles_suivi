@@ -123,8 +123,8 @@
       "keyLabel": "label_fr",
       "data_path": "values",
       "type_util": "nomenclature",
-      "required": "({value}) => value.presence_cadavre == \"1: Présence d'un cadavre\"",
-      "hidden": "({value}) => value.presence_cadavre != \"1: Présence d'un cadavre\" ",
+      "required":"({value}) => value.presence_cadavre?.includes('1')",
+      "hidden": "({value}) => !value.presence_cadavre?.includes('1')",
       "filters": {
         "cd_nomenclature": ["1", "2", "3"]
       }
@@ -132,16 +132,16 @@
     "count_min": {
       "type_widget": "number",
       "attribut_label": "Dénombrement (minimum)",
-      "min": 0,
-      "value": 0,
+      "min": 1,
+      "value": 1,
       "required": "({value}) => value.presence_cadavre?.includes('1')",
       "hidden": "({value}) => !value.presence_cadavre?.includes('1')"
     },
     "count_max": {
       "type_widget": "number",
       "attribut_label": "Dénombrement (maximum)",
+      "required":  "({value}) => value.presence_cadavre?.includes('1')",
       "min": "({value}) => value.count_min",
-      "required": "({value}) => value.presence_cadavre?.includes('1')",
       "hidden": "({value}) => !value.presence_cadavre?.includes('1')"
     },
     "medias": {

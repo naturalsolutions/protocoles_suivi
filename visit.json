@@ -23,12 +23,12 @@
       "hidden": "({meta}) => meta.dataset && Object.keys(meta.dataset).length == 1"
     },
     "observers": {
-      "hidden": true,
-      "required": false
-    },
-    "observers_txt": {
       "hidden": false,
       "required": true
+    },
+    "observers_txt": {
+      "hidden": true,
+      "required": false
     },
     "visit_date_min": {
       "type_widget": "date",
