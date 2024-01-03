@@ -1,0 +1,205 @@
+{
+  "types": [
+    {
+      "mnemonique": "CONTEXTE_SAISIE",
+      "label_default": "Contexte saisie",
+      "definition_default": "Contexte de la saisie de l'éolienne, à savoir s'il s'agit d'une éolienne implantée initialement à la création du parc, si l'éolienne constitue un repowering ou si l'éolienne constitue une extension du parc."
+    },
+    {
+      "mnemonique": "TYPE_LISIERE",
+      "label_default": "Type de lisière",
+      "definition_default": "Type de lisière la plus proche"
+    },
+    {
+      "mnemonique": "TYPE_DONNEE",
+      "label_default": "Type de données récoltées",
+      "definition_default": "Type de données récoltée"
+    },
+    {
+      "mnemonique": "FORME_SURFACE",
+      "label_default": "Forme de la surface",
+      "definition_default": "Forme de la surface de recherche"
+    },
+    {
+      "mnemonique": "TYPE_SURFACE",
+      "label_default": "Type de la surface",
+      "definition_default": "Dureté dominante du substrat sur la surface de prospection"
+    },
+    {
+      "mnemonique": "TYPE_COLISION",
+      "label_default": "Type de colision",
+      "definition_default": "Type de colision"
+    },
+    {
+      "mnemonique": "PRES_CADAVRE",
+      "label_default": "Présence cadavre",
+      "definition_default": "Présence cadavre"
+    },
+    {
+      "mnemonique": "ETAT_CADAVRE",
+      "label_default": "Etat cadavre",
+      "definition_default": "Etat cadavre"
+    },
+    {
+      "mnemonique": "PRES_FORET",
+      "label_default": "Présence forêt",
+      "definition_default": "Présence forêt"
+    }
+  ],
+  "nomenclatures": [
+    {
+      "type": "CONTEXTE_SAISIE",
+      "cd_nomenclature": "INI",
+      "mnemonique": "Initial",
+      "label_default": "Initial",
+      "definition_default": "Initial"
+    },
+    {
+      "type": "CONTEXTE_SAISIE",
+      "cd_nomenclature": "REP",
+      "mnemonique": "Repowering",
+      "label_default": "Repowering",
+      "definition_default": "Repowering"
+    },
+    {
+      "type": "CONTEXTE_SAISIE",
+      "cd_nomenclature": "EXT",
+      "mnemonique": "Extension",
+      "label_default": "Extension",
+      "definition_default": "Extension"
+    },
+    {
+      "type": "TYPE_DONNEE",
+      "cd_nomenclature": "MORTALITE",
+      "mnemonique": "Cadavre",
+      "label_default": "Cadavre",
+      "definition_default": "Cadavre"
+    },
+    {
+      "type": "TYPE_DONNEE",
+      "cd_nomenclature": "PERS_CADAVRE",
+      "mnemonique": "Test de persistance",
+      "label_default": "Test de persistance",
+      "definition_default": "Test de persistance"
+    },
+    {
+      "type": "TYPE_DONNEE",
+      "cd_nomenclature": "EFF_OBSERVATEUR",
+      "mnemonique": "Efficacité de l'observateur",
+      "label_default": "Efficacité de l'observateur",
+      "definition_default": "Efficacité de l'observateur"
+    },
+    {
+      "type": "TYPE_LISIERE",
+      "cd_nomenclature": "HAIE",
+      "mnemonique": "Haie",
+      "label_default": "Haie",
+      "definition_default": "Haie"
+    },
+    {
+      "type": "TYPE_LISIERE",
+      "cd_nomenclature": "FORET",
+      "mnemonique": "Foret",
+      "label_default": "Foret",
+      "definition_default": "Foret"
+    },
+    {
+      "type": "FORME_SURFACE",
+      "cd_nomenclature": "CAR",
+      "mnemonique": "Carré",
+      "label_default": "Carré",
+      "definition_default": "Carré"
+    },
+    {
+      "type": "FORME_SURFACE",
+      "cd_nomenclature": "CER",
+      "mnemonique": "Cercle",
+      "label_default": "Cercle",
+      "definition_default": "Cercle"
+    },
+    {
+      "type": "TYPE_SURFACE",
+      "cd_nomenclature": "M",
+      "mnemonique": "Meuble",
+      "label_default": "Meuble",
+      "definition_default": "Meuble"
+    },
+    {
+      "type": "TYPE_SURFACE",
+      "cd_nomenclature": "C",
+      "mnemonique": "Compact/Imperméable",
+      "label_default": "Compact/Imperméable",
+      "definition_default": "Compact/Imperméable"
+    },
+    {
+      "type": "TYPE_COLISION",
+      "cd_nomenclature": "Ble",
+      "mnemonique": "Blessure visible",
+      "label_default": "Blessure visible",
+      "definition_default": "Blessure visible"
+    },
+    {
+      "type": "TYPE_COLISION",
+      "cd_nomenclature": "Bar",
+      "mnemonique": "barotrauma",
+      "label_default": "barotrauma",
+      "definition_default": "barotrauma"
+    },
+    {
+      "type": "TYPE_COLISION",
+      "cd_nomenclature": "I",
+      "mnemonique": "Indéterminé",
+      "label_default": "Indéterminé",
+      "definition_default": "Indéterminé"
+    },
+    {
+      "type": "ETAT_CADAVRE",
+      "cd_nomenclature": "B",
+      "mnemonique": "Bon",
+      "label_default": "Bon",
+      "definition_default": "Bon"
+    },
+    {
+      "type": "ETAT_CADAVRE",
+      "cd_nomenclature": "D",
+      "mnemonique": "Dégradé",
+      "label_default": "Dégradé",
+      "definition_default": "Dégradé"
+    },
+    {
+      "type": "ETAT_CADAVRE",
+      "cd_nomenclature": "TD",
+      "mnemonique": "Très dégradé",
+      "label_default": "Très dégradé",
+      "definition_default": "Très dégradé"
+    },
+    {
+      "type": "PRES_FORET",
+      "cd_nomenclature": "1",
+      "mnemonique": "Forêt",
+      "label_default": "Forêt",
+      "definition_default": "Forêt"
+    },
+    {
+      "type": "PRES_FORET",
+      "cd_nomenclature": "0",
+      "mnemonique": "Hors forêt",
+      "label_default": "Hors forêt",
+      "definition_default": "Hors forêt"
+    },
+    {
+      "type":"PRES_CADAVRE",
+      "cd_nomenclature": "1",
+      "mnemonique": "Présence d'un cadavre",
+      "label_default": "Présence d'un cadavre",
+      "definition_default": "Présence d'un cadavre"
+    },
+    {
+      "type":"PRES_CADAVRE",
+      "cd_nomenclature": "0",
+      "mnemonique": "Absence de cadavre",
+      "label_default": "Absence de cadavre",
+      "definition_default": "Absence de cadavre"
+    }
+  ]
+}

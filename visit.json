@@ -6,17 +6,19 @@
     "visit_date_max",
     "heure_debut_recherche",
     "nb_observations",
+    "observers",
     "observers_txt",
     "duree_recherche",
     "longueur_surface",
     "surface_recherche",
     "pourcentage_foret",
-    "forme_surface",
+    "id_nomenclature_forme_surface",
+    "id_nomenclature_type_surface",
     "surface_veg",
     "hauteur_moyenne_veg",
-    "type_donnee"
+    "id_type_donnee"
   ],
-  "display_list": ["visit_date_min", "nb_observations", "observers_txt"],
+  "display_list": ["visit_date_min", "nb_observations","observers", "observers_txt"],
   "map_label_field_name": "base_site_code",
   "specific": {
     "id_dataset": {
@@ -61,18 +63,37 @@
       "required": true,
       "min":0
     },
-    "forme_surface": {
-      "type_widget": "select",
-      "attribut_label": "Forme",
-      "values": ["Car: Carré", "Cer: Cercle"],
-      "required": true
+    "id_nomenclature_forme_surface": {
+      "type_widget": "datalist",
+      "attribut_label": "Forme surface",
+      "api": "nomenclatures/nomenclature/FORME_SURFACE",
+      "application": "GeoNature",
+      "keyValue": "id_nomenclature",
+      "keyLabel": "label_fr",
+      "data_path": "values",
+      "type_util": "nomenclature",
+      "required": true,
+      "multiple": false
+    },
+    "id_nomenclature_type_surface": {
+      "type_widget": "datalist",
+      "attribut_label": "Type de surface",
+      "api": "nomenclatures/nomenclature/TYPE_SURFACE",
+      "application": "GeoNature",
+      "keyValue": "id_nomenclature",
+      "keyLabel": "label_fr",
+      "data_path": "values",
+      "type_util": "nomenclature",
+      "required": true,
+      "multiple": false
     },
     "surface_veg": {
       "type_widget": "number",
       "attribut_label": "Pourcentage recouvert par de la végétation",
       "definition": "Pourcentage de la surface prospectée recouverte par de la végétation herbacée à buissonnante, y compris en sous-bois, n'incluant pas la surface non prospectée.",
       "required": true,
-      "min":0
+      "min":0,
+      "max":100
     },
     "hauteur_moyenne_veg": {
       "type_widget": "number",
@@ -86,7 +107,8 @@
       "attribut_label": "Pourcentage recouvert par de la forêt",
       "definition": "Pourcentage de la surface prospectée recouverte par de la forêt, n'incluant pas la surface non prospectée.",
       "required": true,
-      "min":0
+      "min":0,
+      "max":100
     },
     "visit_date_max": {
       "type_widget": "date",
@@ -94,12 +116,21 @@
       "hidden": true,
       "required": true
     },
-    "type_donnee": {
-      "type_widget": "text",
+    "id_type_donnee": {
+      "type_widget": "datalist",
       "attribut_label": "Type de donnée",
-      "value": "Mortalité",
-      "hidden": true,
-      "required": true
+      "api": "nomenclatures/nomenclature/TYPE_DONNEE",
+      "application": "GeoNature",
+      "keyValue": "id_nomenclature",
+      "keyLabel": "label_fr",
+      "data_path": "values",
+      "type_util": "nomenclature",
+      "required": true,
+      "multiple": false,
+      "hidden":true,
+      "default": {
+        "label_fr": "Cadavre"
+      }
     }
   },
   "change": [
