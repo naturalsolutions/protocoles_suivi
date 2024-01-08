@@ -13,7 +13,7 @@
     {
       "mnemonique": "TYPE_DONNEE",
       "label_default": "Type de données récoltées",
-      "definition_default": "Type de données récoltée"
+      "definition_default": "Type de données récoltées"
     },
     {
       "mnemonique": "FORME_SURFACE",
@@ -71,23 +71,23 @@
     {
       "type": "TYPE_DONNEE",
       "cd_nomenclature": "MORTALITE",
-      "mnemonique": "Cadavre",
-      "label_default": "Cadavre",
-      "definition_default": "Cadavre"
+      "mnemonique": "Mortalite",
+      "label_default": "Mortalite",
+      "definition_default": "Mortalité ou présence de cadavre. Le suivi de mortalité des oiseaux et chiroptères sera constitué au minimum de 20 prospections, réparties entre les semaines 20 et 43 (mi mai à octobre), en fonction des risques identifiés dans l'étude d'impact, de la bibliographie et de la connaissance du site. A ce titre, il est rappelé que la période de mi août à fin octobre qui correspond à la période de migration postnuptiale pour l’avifaune et de transits automnaux des chiroptères est considérée comme à cibler en priorité. La période de mai à mi-juillet présente également un intérêt particulier pour les espèces d'oiseaux nicheurs sur le secteur considéré, ainsi que pour les chauves-souris en période de mise-bas."
     },
     {
       "type": "TYPE_DONNEE",
       "cd_nomenclature": "PERS_CADAVRE",
       "mnemonique": "Test de persistance",
       "label_default": "Test de persistance",
-      "definition_default": "Test de persistance"
+      "definition_default": "Test de persistance de cadavre. Il est recommandé de réaliser 2 tests de persistance des cadavres par suivi, à des périodes distinctes, selon le protocole suivant : 1. Disperser de nouveau les cadavres (entre 3 et 5 par éolienne) sous les différentes éoliennes du parc 2. Suivre la persistance des cadavres par des passages répétés. 3. Au minimum, un retour le lendemain du jour de dispersion, puis 2 par semaines jusqu’à disparition des cadavres ou après une période de 14 jours. "
     },
     {
       "type": "TYPE_DONNEE",
       "cd_nomenclature": "EFF_OBSERVATEUR",
       "mnemonique": "Efficacité de l'observateur",
       "label_default": "Efficacité de l'observateur",
-      "definition_default": "Efficacité de l'observateur"
+      "definition_default": "Efficacité de l'observateur. Il est recommandé de réaliser 2 tests d'efficacité de recherche par campagne de suivi annuel, à des périodes distinctes, selon le protocole suivant : 1. Choisir une ou plusieurs éoliennes où les différents types de végétation du parc éolien sont représentés et reporter ces derniers sur une carte. 2. Un 1er opérateur disperse un total de 15 à 20 leurres de tailles différentes sur les différents types de végétation, à l’abri du regard de l’opérateur dont l’efficacité doit être testée. Il note la position des leurres dispersés pour faciliter leur récupération par la suite. 3. Le chercheur prospecte alors le carré échantillon en respectant le protocole (transects)."
     },
     {
       "type": "TYPE_LISIERE",
@@ -183,9 +183,9 @@
     {
       "type": "PRES_FORET",
       "cd_nomenclature": "0",
-      "mnemonique": "Hors forêt",
-      "label_default": "Hors forêt",
-      "definition_default": "Hors forêt"
+      "mnemonique": "Pas de fôret",
+      "label_default": "Pas de fôret",
+      "definition_default": "Pas de fôret"
     },
     {
       "type":"PRES_CADAVRE",
@@ -199,7 +199,7 @@
       "cd_nomenclature": "0",
       "mnemonique": "Absence de cadavre",
       "label_default": "Absence de cadavre",
-      "definition_default": "Absence de cadavre"
+      "definition_default": "Absence de cadavre durant la prospection"
     }
   ]
 }
