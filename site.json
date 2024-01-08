@@ -25,8 +25,7 @@
     "base_site_name",
     "base_site_code",
     "last_visit",
-    "modele_eolienne",
-    "contexte_saisie"
+    "modele_eolienne"
   ],
   "specific": {
     "base_site_code": {
