@@ -1,0 +1,279 @@
+{
+  "types": [
+    {
+      "mnemonique": "TYPEDONNEE",
+      "label_default": "TypeDonnee",
+      "definition_default": "Type de données récoltées"
+    },
+	{
+      "mnemonique": "PRESCADAVRE",
+      "label_default": "PresCadavre",
+      "definition_default": "Présence de cadavre. Indique si un cadavre a été découvert ou non, permettant ainsi de saisir une donnée d'absence de cadavre. Chaque cadavre fait l'objet de la saisie d'une ligne par cadavre."
+    },
+	{
+      "mnemonique": "FORMESURFACE",
+      "label_default": "FormeSurface",
+      "definition_default": "Forme de la surface de recherche."
+    },
+	{
+      "mnemonique": "TYPECAD",
+      "label_default": "TypeCad",
+      "definition_default": "Type de cadavre servant au test de persistance."
+    },
+	{
+      "mnemonique": "TYPELEURRE",
+      "label_default": "TypeLeurre",
+      "definition_default": "Type de leurre servant au test observateur."
+    },
+	{
+      "mnemonique": "COULEURLEURRE",
+      "label_default": "CouleurLeurre",
+      "definition_default": "Couleur du cadavre ou du leurre. La couleur sélectionnée doit être celle qui se rapproche le plus en moyenne de celles proposées."
+    },
+	{
+      "mnemonique": "EFFICACITE",
+      "label_default": "Efficacite",
+      "definition_default": "Efficacité de l'observateur lors de la recherche du cadavre."
+    },
+	{
+      "mnemonique": "TYPESURFACE",
+      "label_default": "TypeSurface",
+      "definition_default": "Dureté dominante du substrat sur la surface de prospection."
+    },
+	{
+      "mnemonique": "PRESFORET",
+      "label_default": "PresForet",
+      "definition_default": "Localisation du cadavre ou du leurre en forêt ou non."
+    },
+	{
+      "mnemonique": "TYPEDONNEEGITE",
+      "label_default": "TypeDonneeGite",
+      "definition_default": "Type de données récoltées sur la localisation du gîte prospecté."
+    },
+	{
+      "mnemonique": "TYPEGITE",
+      "label_default": "TypeGite",
+      "definition_default": "Type de données récoltées sur la localisation du gîte prospecté."
+    }
+  ],
+  "nomenclatures": [
+    {
+      "type":"TYPEDONNEE",
+      "cd_nomenclature": "TYPEDONNEE_1",
+      "mnemonique": "Mortalite",
+      "label_default": "Mortalité",
+      "definition_default": "Mortalité ou présence de cadavre. Le suivi de mortalité des oiseaux et chiroptères sera constitué au minimum de 20 prospections, réparties entre les semaines 20 et 43 (mi mai à octobre), en fonction des risques identifiés dans l'étude d'impact, de la bibliographie et de la connaissance du site. A ce titre, il est rappelé que la période de mi août à fin octobre qui correspond à la période de migration postnuptiale pour l’avifaune et de transits automnaux des chiroptères est considérée comme à cibler en priorité. La période de mai à mi-juillet présente également un intérêt particulier pour les espèces d'oiseaux nicheurs sur le secteur considéré, ainsi que pour les chauves-souris en période de mise-bas."
+      },
+      {
+      "type":"TYPEDONNEE",
+      "cd_nomenclature": "TYPEDONNEE_2",
+      "mnemonique": "PersCadavre",
+      "label_default": "Persistance de cadavre",
+      "definition_default": "Test de persistance de cadavre. Il est recommandé de réaliser 2 tests de persistance des cadavres par suivi, à des périodes distinctes, selon le protocole suivant : 1. Disperser de nouveau les cadavres (entre 3 et 5 par éolienne) sous les différentes éoliennes du parc 2. Suivre la persistance des cadavres par des passages répétés. 3. Au minimum, un retour le lendemain du jour de dispersion, puis 2 par semaines jusqu’à disparition des cadavres ou après une période de 14 jours. "
+      },
+      {
+      "type":"TYPEDONNEE",
+      "cd_nomenclature": "TYPEDONNEE_3",
+      "mnemonique": "EffObservateur",
+      "label_default": "Efficacité de l'observateur",
+      "definition_default": "Efficacité de l'observateur. Il est recommandé de réaliser 2 tests d'efficacité de recherche par campagne de suivi annuel, à des périodes distinctes, selon le protocole suivant : 1. Choisir une ou plusieurs éoliennes où les différents types de végétation du parc éolien sont représentés et reporter ces derniers sur une carte. 2. Un 1er opérateur disperse un total de 15 à 20 leurres de tailles différentes sur les différents types de végétation, à l’abri du regard de l’opérateur dont l’efficacité doit être testée. Il note la position des leurres dispersés pour faciliter leur récupération par la suite. 3. Le chercheur prospecte alors le carré échantillon en respectant le protocole (transects)."
+      },
+      {
+      "type":"PRESCADAVRE",
+      "cd_nomenclature": "PRESCADAVRE_1",
+      "mnemonique": "1",
+      "label_default": "Présence d'un cadavre",
+      "definition_default": ""
+      },
+	   {
+      "type":"PRESCADAVRE",
+      "cd_nomenclature": "PRESCADAVRE_2",
+      "mnemonique": "0",
+      "label_default": "Absence de cadavre durant la prospection",
+      "definition_default": ""
+      },
+	   {
+      "type":"FORMESURFACE",
+      "cd_nomenclature": "FORMESURFACE_1",
+      "mnemonique": "Car",
+      "label_default": "Carré",
+      "definition_default": ""
+      },
+	   {
+      "type":"FORMESURFACE",
+      "cd_nomenclature": "FORMESURFACE_2",
+      "mnemonique": "Cer",
+      "label_default": "Cercle",
+      "definition_default": ""
+      },
+	  {
+      "type":"TYPECAD",
+      "cd_nomenclature": "TYPECAD_1",
+      "mnemonique": "Chi",
+      "label_default": "Chiroptère",
+      "definition_default": ""
+      },
+	   {
+      "type":"TYPECAD",
+      "cd_nomenclature": "TYPECAD_2",
+      "mnemonique": "Ois",
+      "label_default": "Oiseau",
+      "definition_default": ""
+      },
+	   {
+      "type":"TYPECAD",
+      "cd_nomenclature": "TYPECAD_3",
+      "mnemonique": "Aut",
+      "label_default": "Autre",
+      "definition_default": ""
+      },
+	  {
+      "type":"TYPELEURRE",
+      "cd_nomenclature": "TYPELEURRE_1",
+      "mnemonique": "Bio",
+      "label_default": "Matériel biologique mort",
+      "definition_default": "Matériel biologique mort (oiseau ou chiroptère)"
+      },
+	  {
+      "type":"TYPELEURRE",
+      "cd_nomenclature": "TYPELEURRE_2",
+      "mnemonique": "Art",
+      "label_default": "Matériel artificiel",
+      "definition_default": "matériel artificiel (tissu, plastique…)"
+      },
+	   {
+      "type":"COULEURLEURRE",
+      "cd_nomenclature": "COULEURLEURRE_1",
+      "mnemonique": "Bl",
+      "label_default": "Blanc",
+      "definition_default": ""
+      },
+	  {
+      "type":"COULEURLEURRE",
+      "cd_nomenclature": "COULEURLEURRE_2",
+      "mnemonique": "Gr",
+      "label_default": "Gris",
+      "definition_default": ""
+      },
+	  {
+      "type":"COULEURLEURRE",
+      "cd_nomenclature": "COULEURLEURRE_3",
+      "mnemonique": "Ja",
+      "label_default": "Jaune",
+      "definition_default": ""
+      },
+	  {
+      "type":"COULEURLEURRE",
+      "cd_nomenclature": "COULEURLEURRE_4",
+      "mnemonique": "Ma",
+      "label_default": "Marron",
+      "definition_default": ""
+      },
+	  {
+      "type":"COULEURLEURRE",
+      "cd_nomenclature": "COULEURLEURRE_5",
+      "mnemonique": "No",
+      "label_default": "Noir",
+      "definition_default": ""
+      },
+	  {
+      "type":"EFFICACITE",
+      "cd_nomenclature": "EFFICACITE_1",
+      "mnemonique": "1",
+      "label_default": "Cadavre trouvé par l'observateur",
+      "definition_default": ""
+      },
+	  {
+      "type":"EFFICACITE",
+      "cd_nomenclature": "EFFICACITE_2",
+      "mnemonique": "0",
+      "label_default": "Cadavre non trouvé par l'observateur",
+      "definition_default": ""
+      },
+	  {
+      "type":"TYPESURFACE",
+      "cd_nomenclature": "TYPESURFACE_1",
+      "mnemonique": "M",
+      "label_default": "Meuble",
+      "definition_default": ""
+      },
+	   {
+      "type":"TYPESURFACE",
+      "cd_nomenclature": "TYPESURFACE_2",
+      "mnemonique": "C",
+      "label_default": "Compact/imperméable",
+      "definition_default": ""
+      },
+	   {
+      "type":"PRESFORET",
+      "cd_nomenclature": "PRESFORET_1",
+      "mnemonique": "1",
+      "label_default": "Fôret",
+      "definition_default": ""
+      },
+	   {
+      "type":"PRESFORET",
+      "cd_nomenclature": "PRESFORET_2",
+      "mnemonique": "0",
+      "label_default": "Pas de fôret",
+      "definition_default": ""
+      },
+		{
+      "type":"TYPEDONNEEGITE",
+      "cd_nomenclature": "TYPEDONNEEGITE_1",
+      "mnemonique": "cad",
+      "label_default": "Un ou plusieurs cadavres considérés comme appartenant à la même espèce.",
+      "definition_default": ""
+      },
+	  		{
+      "type":"TYPEDONNEEGITE",
+      "cd_nomenclature": "TYPEDONNEEGITE_2",
+      "mnemonique": "IndPres",
+      "label_default": "Un ou plusieurs indices de présence.",
+      "definition_default": ""
+      },
+		{
+      "type":"TYPEDONNEEGITE",
+      "cd_nomenclature": "TYPEDONNEEGITE_3",
+      "mnemonique": "Abs",
+      "label_default": "Absence de chiroptère ou d'indice.",
+      "definition_default": ""
+      },
+	  	{
+      "type":"TYPEGITE",
+      "cd_nomenclature": "TYPEGITE_1",
+      "mnemonique": "Art",
+      "label_default": "Artificiel visant les chiroptères.",
+      "definition_default": ""
+      },
+	  	{
+      "type":"TYPEGITE",
+      "cd_nomenclature": "TYPEGITE_2",
+      "mnemonique": "Bat",
+      "label_default": "Bâti.",
+      "definition_default": ""
+      },
+	  	  	{
+      "type":"TYPEGITE",
+      "cd_nomenclature": "TYPEGITE_3",
+      "mnemonique": "Arb",
+      "label_default": "Arbre.",
+      "definition_default": ""
+      },
+	  	  	{
+      "type":"TYPEGITE",
+      "cd_nomenclature": "TYPEGITE_4",
+      "mnemonique": "Inf",
+      "label_default": "Infrastructures autres tels que les ponts.",
+      "definition_default": ""
+      },
+	  	  	{
+      "type":"TYPEGITE",
+      "cd_nomenclature": "TYPEGITE_5",
+      "mnemonique": "Sou",
+      "label_default": "Souterrains incluant toutes les cavités naturelles ou artificielles.",
+      "definition_default": ""
+      }
+
+  ]
+}
