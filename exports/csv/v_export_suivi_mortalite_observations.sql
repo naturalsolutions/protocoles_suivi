@@ -43,7 +43,7 @@ select tm.module_code as protocole,
 	select 
 			case 
 				when entity_id.entity_id = 'no_media' then null
-			else concat('https://geonature.snpn.com/geonature/api/media/attachments/',
+			else concat('https://geonature.test01.natural-solutions.eu/geonature/api/media/attachments/',
 			entity_id.entity_id)
 		end
 	from
