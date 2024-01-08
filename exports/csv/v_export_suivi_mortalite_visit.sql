@@ -23,9 +23,9 @@ select tm.module_code as TypeDonnee,
         distinct concat (UPPER(tr.nom_role), ' ', tr.prenom_role),
         ', '
         order by concat (UPPER(tr.nom_role), ' ', tr.prenom_role)
-    ) as observers,
+    ) as observers_visit,
     string_agg(bo.nom_organisme, ','),
-    tvc.data->>'observers_txt' as obsExterieurs,
+    tvc.data->>'observers_txt' as obsExterieurs_visit,
     tbv.id_dataset,
     td.dataset_name
 from gn_monitoring.t_base_visits tbv
