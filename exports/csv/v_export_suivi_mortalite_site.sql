@@ -1,8 +1,7 @@
 DROP VIEW IF EXISTS gn_monitoring.v_export_suivi_mortalite_site;
-
 CREATE OR REPLACE VIEW gn_monitoring.v_export_suivi_mortalite_site as
 SELECT 
-tm.module_code as TypeDonnee,
+tm.module_code as protocole,
 tsg.sites_group_name AS lbParc,
 tsg.sites_group_code AS idParc,
 tsg.geom AS CoordParc,
@@ -10,8 +9,8 @@ st_x(st_centroid(tsg.geom)) AS longitude,
 st_y(st_centroid(tsg.geom)) AS latitude,
 tsg.altitude_min as "altitudeMinParc",
 tsg.altitude_max as "altitudeMaxParc",
-rfg_i_com AS communeParc,
-rfg_i_dep AS departementParc,
+(rfg_i_com).commune_from_centroid AS communeParc,
+(rfg_i_dep).dep_from_centroid AS departementParc,
 ref_nomenclatures.get_nomenclature_label((cmt.id_type_site)::integer) AS type_site,
 s.base_site_name AS nomEolienne,
 s.base_site_code AS idEolienne,

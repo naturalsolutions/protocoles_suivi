@@ -1,6 +1,6 @@
 DROP VIEW IF EXISTS gn_monitoring.v_export_suivi_mortalite_observations;
 CREATE OR REPLACE VIEW gn_monitoring.v_export_suivi_mortalite_observations as
-select tm.module_code as TypeDonnee,
+select tm.module_code as protocole,
     tbs.base_site_code as idEolienne,
     tbs.id_base_site,
     tbv.id_base_visit,
