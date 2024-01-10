@@ -1,147 +1,42 @@
 {
   "cruved": { "C": 1, "U": 1, "D": 3 },
-  "display_properties": [
-    "presence_cadavre",
-    "cd_nom",
-    "count_min",
-    "count_max",
-    "hauteur_veg",
-    "id_nomenclature_presence_foret",
-    "id_nomenclature_type_colision",
-    "ditance_eol",
-    "heure_obs",
-    "id_nomenclature_etat_cadavre",
-    "id_nomenclature_life_stage",
-    "id_nomenclature_bio_status",
-    "id_nomenclature_sex"
-  ],
-  "display_list": ["cd_nom", "count_min", "count_max"],
+  "display_properties": ["cd_nom", "date_depot_cadavre", "id_nomenclature_presence_foret"],
+  "display_list": ["cd_nom", "date_depot_cadavre", "id_nomenclature_presence_foret"],
   "map_label_field_name": "base_site_code",
   "redirect_to_parent": true,
   "specific": {
-    "presence_cadavre": {
-      "type_widget": "radio",
-      "attribut_label": "Présence d'un cadavre",
-      "values": ["Présence d'un cadavre", "Absence de cadavre durant la prospection"],
-      "required": true,
-      "value": "Absence de cadavre durant la prospection",
-      "definition": "Si l'absence d'un cadavre est sélectionné alors vous ne pouvez pas saisir d'observations"
-    },
-    "heure_obs": {
-      "type_widget": "time",
-      "attribut_label": "Heure observation",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
-    },
-    "ditance_eol": {
-      "type_widget": "number",
-      "attribut_label": "Distance à l'éolienne la plus proche",
-      "definition": "Distance en mètre ",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')",
-      "min":0
-    },
-    "id_nomenclature_type_colision": {
-      "type_widget": "nomenclature",
-      "attribut_label": "Type de collision",
-      "code_nomenclature_type": "TYPE_COLISION",
-      "type_util": "nomenclature",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
-    },
-    "id_nomenclature_etat_cadavre": {
-      "type_widget": "nomenclature",
-      "attribut_label": "Etat du cadavre",
-      "code_nomenclature_type": "ETAT_CADAVRE",
-      "type_util": "nomenclature",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
-    },
-    "id_nomenclature_presence_foret": {
-      "type_widget": "nomenclature",
-      "attribut_label": "Présence forêt",
-      "code_nomenclature_type": "PRES_FORET",
-      "type_util": "nomenclature",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
-    },
-    "hauteur_veg": {
-      "type_widget": "number",
-      "attribut_label": "Hauteur de la végétation",
-      "definition": "Hauteur de la végétation herbacée à buissonnante à l'emplacement  du cadavre en centimètres",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')",
-      "min":0
-    },
     "cd_nom": {
       "type_widget": "taxonomy",
-      "attribut_label": "Espèce observée",
+      "attribut_label": "Espèce cadavre",
       "keyValue": "cd_nom",
       "keyLabel": "__MODULE.TAXONOMY_DISPLAY_FIELD_NAME",
       "multiple": false,
       "api": "taxref/allnamebylist/__MODULE.ID_LIST_TAXONOMY",
       "application": "TaxHub",
       "type_util": "taxonomy",
-      "required": true,
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
+      "required": true
     },
-    "id_nomenclature_sex": {
-      "type_widget": "datalist",
-      "attribut_label": "Sexe",
-      "api": "nomenclatures/nomenclature/SEXE",
-      "application": "GeoNature",
-      "keyValue": "id_nomenclature",
-      "keyLabel": "label_fr",
-      "data_path": "values",
+    "date_depot_cadavre": {
+      "type_widget": "date",
+      "attribut_label": "Date de dépôt du cadavre",
+      "required": true
+    },
+    "date_derniere_pres_cad": {
+      "type_widget": "date",
+      "attribut_label": "Date de la dernière présence observée du cadavre",
+      "required": true
+    },
+    "date_premiere_abs_cad": {
+      "type_widget": "date",
+      "attribut_label": "Date de la première absence observée du cadavre",
+      "required": true
+    },
+    "id_nomenclature_presence_foret": {
+      "type_widget": "nomenclature",
+      "attribut_label": "Présence forêt",
+      "code_nomenclature_type": "PRES_FORET",
       "type_util": "nomenclature",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')",
-      "filters": { "cd_nomenclature": ["1", "2", "3"] }
-    },
-    "id_nomenclature_bio_status": {
-      "type_widget": "datalist",
-      "attribut_label": "Statut biologique du cadavre.",
-      "api": "nomenclatures/nomenclature/STATUT_BIO",
-      "application": "GeoNature",
-      "keyValue": "id_nomenclature",
-      "keyLabel": "label_fr",
-      "data_path": "values",
-      "type_util": "nomenclature",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')",
-      "filters": {
-        "cd_nomenclature": ["3", "9", "2"]
-      }
-    },
-    "id_nomenclature_life_stage": {
-      "type_widget": "datalist",
-      "attribut_label": "Stade de vie",
-      "api": "nomenclatures/nomenclature/STADE_VIE",
-      "application": "GeoNature",
-      "keyValue": "id_nomenclature",
-      "keyLabel": "label_fr",
-      "data_path": "values",
-      "type_util": "nomenclature",
-      "required":"({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')",
-      "filters": {
-        "cd_nomenclature": ["1", "2", "3"]
-      }
-    },
-    "count_min": {
-      "type_widget": "number",
-      "attribut_label": "Dénombrement (minimum)",
-      "min": 1,
-      "value": 1,
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
-    },
-    "count_max": {
-      "type_widget": "number",
-      "attribut_label": "Dénombrement (maximum)",
-      "required":  "({value}) => value.presence_cadavre?.includes('Présence')",
-      "min": "({value}) => value.count_min",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
+      "required": true
     },
     "medias": {
       "hidden": true,
@@ -153,8 +48,7 @@
   "change": [
     "({objForm, meta}) => {",
     "console.log(objForm.controls)",
-      "if (objForm.controls['presence_cadavre'].value == 'Absence de cadavre durant la prospection') {",
-        "objForm.patchValue( {'cd_nom':null});",
+    "console.log(meta)",
     "}",
     "}"
   ]
