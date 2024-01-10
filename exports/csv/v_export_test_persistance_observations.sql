@@ -7,36 +7,17 @@ select tm.module_code as protocole,
     tobs.id_observation,
     tobs.cd_nom,
     ref_nomenclatures.get_nomenclature_label(
-        (toc.data->>'id_nomenclature_type_colision')::integer
-    ) as TypeCollision,
-    ref_nomenclatures.get_nomenclature_label(
-        (toc.data->>'id_nomenclature_etat_cadavre')::integer
-    ) as EtatCadavre,
-    ref_nomenclatures.get_nomenclature_label(
         (toc.data->>'id_nomenclature_presence_foret')::integer
     ) as PresForet,
-    ref_nomenclatures.get_nomenclature_label((toc.data->>'id_nomenclature_sex')::integer) as Sexe,
-    ref_nomenclatures.get_nomenclature_label(
-        (toc.data->>'id_nomenclature_bio_status')::integer
-    ) as StatutBiologique,
-    ref_nomenclatures.get_nomenclature_label(
-        (toc.data->>'id_nomenclature_life_stage')::integer
-    ) as Age,
-    toc.data->>'ditance_eol' as DistEolienne,
-    toc.data->>'hauteur_veg' as HauteurVeg,
-    toc.data->>'count_min' as CountMin,
-    toc.data->>'count_max' as CountMax,
-    toc.data->>'heure_obs' as HeureObs,
+    toc.data->>'date_depot_cadavre' as DateDepot,
+    toc.data->>'date_derniere_pres_cad' as DateDernierePresence,
+    toc.data->>'date_premiere_abs_cad' as DatePremiereAbsence,
     string_agg(
         distinct concat (UPPER(tr.nom_role), ' ', tr.prenom_role),
         ', '
         order by concat (UPPER(tr.nom_role), ' ', tr.prenom_role)
     ) as observers,
     string_agg(bo.nom_organisme, ','),
-    case
-        when toc.data->>'presence_cadavre' = 'Absence de cadavre durant la prospection' then null
-        else (toc.data->>'presence_cadavre')
-    end as "PresCadavre",
     tobs.comments as commentaireObs,
 	array_to_string(
 	array(
