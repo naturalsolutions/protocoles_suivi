@@ -54,35 +54,35 @@
       "type":"TYPE_DONNEE_GITE",
       "cd_nomenclature": "CADAVRE",
       "mnemonique": "Cadavre",
-      "label_default": "Un ou plusieurs cadavres considérés comme appartenant à la même espèce.",
-      "definition_default": ""
+      "label_default": "Cadavre",
+      "definition_default": "Un ou plusieurs cadavres considérés comme appartenant à la même espèce."
       },
 	  		{
       "type":"TYPE_DONNEE_GITE",
       "cd_nomenclature": "INDICE_PRESENCE",
       "mnemonique": "Indice de presence",
-      "label_default": "Un ou plusieurs indices de présence.",
-      "definition_default": ""
+      "label_default": "Indice de presence",
+      "definition_default": "Un ou plusieurs indices de présence"
       },
 		{
       "type":"TYPE_DONNEE_GITE",
       "cd_nomenclature": "ABSENCE",
       "mnemonique": "Absence",
-      "label_default": "Absence de chiroptère ou d'indice.",
-      "definition_default": ""
+      "label_default": "Absence",
+      "definition_default": "Absence de chiroptère ou d'indice."
       },
 	  	{
       "type":"TYPE_GITE",
       "cd_nomenclature": "ARTIFICIEL",
       "mnemonique": "Art",
-      "label_default": "Artificiel visant les chiroptères.",
-      "definition_default": ""
+      "label_default": "Artificiel",
+      "definition_default": "Artificiel visant les chiroptères."
       },
 	  	{
       "type":"TYPE_GITE",
       "cd_nomenclature": "BATI",
       "mnemonique": "Bat",
-      "label_default": "Bâti.",
+      "label_default": "Bâti",
       "definition_default": ""
       },
 	  	  	{
