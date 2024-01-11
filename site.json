@@ -19,15 +19,13 @@
     "base_site_code",
     "first_use_date",
     "id_inventor",
-    "nb_visits",
-    "base_site_description"
+    "nb_visits"
   ],
   "display_list": [
     "base_site_name",
     "base_site_code",
     "last_visit",
-    "modele_eolienne",
-    "contexte_saisie"
+    "modele_eolienne"
   ],
   "specific": {
     "base_site_code": {
