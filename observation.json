@@ -33,8 +33,7 @@
       "api": "taxref/allnamebylist/__MODULE.ID_LIST_TAXONOMY",
       "application": "TaxHub",
       "type_util": "taxonomy",
-      "required": true,
-      "hidden": "({value}) => !value.id_nomenclature_type_donnee_gite?.includes('Présence')"
+      "required": true
     },
     "id_nomenclature_type_effectif": {
       "type_widget": "datalist",
@@ -45,7 +44,8 @@
       "keyLabel": "label_fr",
       "data_path": "values",
       "type_util": "nomenclature",
-      "required": true,
+      "required": "({value}) => [808,807].includes(value.id_nomenclature_type_donnee_gite)",
+      "hidden": "({value}) => ![808,807].includes(value.id_nomenclature_type_donnee_gite)",
       "multiple": false
     },
     "effectif": {
@@ -53,8 +53,8 @@
       "attribut_label": "Nombre d'individus",
       "min": 1,
       "value": 1,
-      "required": "({value}) => value.id_nomenclature_type_donnee_gite?.includes('Présence')",
-      "hidden": "({value}) => !value.id_nomenclature_type_donnee_gite?.includes('Présence')"
+      "required": "({value}) => [808,807].includes(value.id_nomenclature_type_donnee_gite)",
+      "hidden": "({value}) => ![808,807].includes(value.id_nomenclature_type_donnee_gite)"
     },
     "id_nomenclature_presence_juvenile": {
       "type_widget": "datalist",
@@ -65,7 +65,8 @@
       "keyLabel": "label_fr",
       "data_path": "values",
       "type_util": "nomenclature",
-      "required": true,
+      "required": "({value}) => [808,807].includes(value.id_nomenclature_type_donnee_gite)",
+      "hidden": "({value}) => ![808,807].includes(value.id_nomenclature_type_donnee_gite)",
       "multiple": false
     },
     "nb_juvenils": {
@@ -74,7 +75,7 @@
       "min": 1,
       "value": 1,
       "required": false,
-      "hidden": "({value}) => !value.id_nomenclature_type_donnee_gite?.includes('Présence')"
+      "hidden": "({value}) => ![808,807].includes(value.id_nomenclature_type_donnee_gite) || value.id_nomenclature_presence_juvenile == 804"
     },
     "medias": {
       "hidden": true,
@@ -86,8 +87,10 @@
   "change": [
     "({objForm, meta}) => {",
     "console.log(objForm.controls)",
-      "if (objForm.controls['id_nomenclature_type_donnee_gite'].value == 'Absence de cadavre durant la prospection') {",
+    "if ('id_nomenclature_type_donnee_gite' in objForm.controls) {",
+      "if (objForm.controls['id_nomenclature_type_donnee_gite'].value == 809) {",
         "objForm.patchValue( {'cd_nom':null});",
+        "}",
     "}",
     "}"
   ]
