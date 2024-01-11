@@ -65,7 +65,7 @@
       "multiple": false,
       "hidden":true,
       "default": {
-        "label_fr": "Test de persistance"
+        "cd_nomenclature": "PERS_CADAVRE"
       }
     }
   },
