@@ -12,7 +12,7 @@
   ],
   "label": "Gîte",
   "label_list": "Gîtes",
-  "genre": "F",
+  "genre": "M",
   "geometry_type": "Point",
   "display_properties": [
     "base_site_name",
