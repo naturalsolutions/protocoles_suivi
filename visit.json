@@ -129,7 +129,7 @@
       "multiple": false,
       "hidden":true,
       "default": {
-        "label_fr": "Cadavre"
+        "cd_nomenclature": "MORTALITE"
       }
     }
   },
