@@ -44,12 +44,5 @@
       "attribut_label": "Médias",
       "schema_dot_table": "gn_monitoring.t_observations"
     }
-  },
-  "change": [
-    "({objForm, meta}) => {",
-    "console.log(objForm.controls)",
-    "console.log(meta)",
-    "}",
-    "}"
-  ]
+  }
 }
