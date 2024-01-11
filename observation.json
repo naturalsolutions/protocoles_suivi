@@ -1,7 +1,7 @@
 {
   "cruved": { "C": 1, "U": 1, "D": 3 },
   "display_properties": [
-    "presence_cadavre",
+    "id_nomenclature_presence_cadavre",
     "cd_nom",
     "count_min",
     "count_max",
@@ -19,26 +19,30 @@
   "map_label_field_name": "base_site_code",
   "redirect_to_parent": true,
   "specific": {
-    "presence_cadavre": {
-      "type_widget": "radio",
-      "attribut_label": "Présence d'un cadavre",
-      "values": ["Présence d'un cadavre", "Absence de cadavre durant la prospection"],
-      "required": true,
-      "value": "Absence de cadavre durant la prospection",
-      "definition": "Si l'absence d'un cadavre est sélectionné alors vous ne pouvez pas saisir d'observations"
+    "id_nomenclature_presence_cadavre": {
+      "type_widget": "datalist",
+      "attribut_label": "Présence cadavre",
+      "api": "nomenclatures/nomenclature/PRES_CADAVRE",
+      "application": "GeoNature",
+      "keyValue": "id_nomenclature",
+      "keyLabel": "label_fr",
+      "data_path": "values",
+      "type_util": "nomenclature",
+      "required":true,
+      "multiple": false
     },
     "heure_obs": {
       "type_widget": "time",
       "attribut_label": "Heure observation",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796"
     },
     "ditance_eol": {
       "type_widget": "number",
       "attribut_label": "Distance à l'éolienne la plus proche",
       "definition": "Distance en mètre ",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')",
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796",
       "min":0
     },
     "id_nomenclature_type_colision": {
@@ -46,31 +50,31 @@
       "attribut_label": "Type de collision",
       "code_nomenclature_type": "TYPE_COLISION",
       "type_util": "nomenclature",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796"
     },
     "id_nomenclature_etat_cadavre": {
       "type_widget": "nomenclature",
       "attribut_label": "Etat du cadavre",
       "code_nomenclature_type": "ETAT_CADAVRE",
       "type_util": "nomenclature",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796"
     },
     "id_nomenclature_presence_foret": {
       "type_widget": "nomenclature",
       "attribut_label": "Présence forêt",
       "code_nomenclature_type": "PRES_FORET",
       "type_util": "nomenclature",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796"
     },
     "hauteur_veg": {
       "type_widget": "number",
       "attribut_label": "Hauteur de la végétation",
       "definition": "Hauteur de la végétation herbacée à buissonnante à l'emplacement  du cadavre en centimètres",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')",
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796",
       "min":0
     },
     "cd_nom": {
@@ -83,7 +87,7 @@
       "application": "TaxHub",
       "type_util": "taxonomy",
       "required": true,
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796"
     },
     "id_nomenclature_sex": {
       "type_widget": "datalist",
@@ -94,8 +98,8 @@
       "keyLabel": "label_fr",
       "data_path": "values",
       "type_util": "nomenclature",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')",
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796",
       "filters": { "cd_nomenclature": ["1", "2", "3"] }
     },
     "id_nomenclature_bio_status": {
@@ -107,8 +111,8 @@
       "keyLabel": "label_fr",
       "data_path": "values",
       "type_util": "nomenclature",
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')",
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796",
       "filters": {
         "cd_nomenclature": ["3", "9", "2"]
       }
@@ -122,8 +126,8 @@
       "keyLabel": "label_fr",
       "data_path": "values",
       "type_util": "nomenclature",
-      "required":"({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')",
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796",
       "filters": {
         "cd_nomenclature": ["1", "2", "3"]
       }
@@ -133,15 +137,15 @@
       "attribut_label": "Dénombrement (minimum)",
       "min": 1,
       "value": 1,
-      "required": "({value}) => value.presence_cadavre?.includes('Présence')",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796"
     },
     "count_max": {
       "type_widget": "number",
       "attribut_label": "Dénombrement (maximum)",
-      "required":  "({value}) => value.presence_cadavre?.includes('Présence')",
-      "min": "({value}) => value.count_min",
-      "hidden": "({value}) => !value.presence_cadavre?.includes('Présence')"
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796",
+      "min": "({value}) => value.count_min"
     },
     "medias": {
       "hidden": true,
@@ -152,8 +156,7 @@
   },
   "change": [
     "({objForm, meta}) => {",
-    "console.log(objForm.controls)",
-      "if (objForm.controls['presence_cadavre'].value == 'Absence de cadavre durant la prospection') {",
+      "if (objForm.controls['id_nomenclature_presence_cadavre'].value != 796) {",
         "objForm.patchValue( {'cd_nom':null});",
     "}",
     "}"
