@@ -86,7 +86,6 @@
   },
   "change": [
     "({objForm, meta}) => {",
-    "console.log(objForm.controls)",
     "if ('id_nomenclature_type_donnee_gite' in objForm.controls) {",
       "if (objForm.controls['id_nomenclature_type_donnee_gite'].value == 809) {",
         "objForm.patchValue( {'cd_nom':null});",
