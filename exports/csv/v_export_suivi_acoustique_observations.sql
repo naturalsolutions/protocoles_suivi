@@ -1,5 +1,5 @@
-DROP VIEW IF EXISTS gn_monitoring.v_export_suivi_mortalite_observations;
-CREATE OR REPLACE VIEW gn_monitoring.v_export_suivi_mortalite_observations as
+DROP VIEW IF EXISTS gn_monitoring.v_export_suivi_acoustique_observations;
+CREATE OR REPLACE VIEW gn_monitoring.v_export_suivi_acoustique_observations as
 select tm.module_code as protocole,
     tbs.base_site_code as idEolienne,
     tbs.id_base_site,
@@ -84,7 +84,7 @@ from gn_monitoring.t_observations tobs
 	group by
 		tmed.uuid_attached_row) tmed3 on
 	tmed3.uuid_attached_row = tobs.uuid_observation
-where tm.module_code::text = 'suivi_mortalite'
+where tm.module_code::text = 'suivi_acoustique'
 group by tobs.id_observation,
     tm.module_code,
     tbs.id_base_site,

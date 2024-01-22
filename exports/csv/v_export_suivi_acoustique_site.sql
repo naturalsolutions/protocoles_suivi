@@ -1,5 +1,5 @@
-DROP VIEW IF EXISTS gn_monitoring.v_export_suivi_mortalite_site;
-CREATE OR REPLACE VIEW gn_monitoring.v_export_suivi_mortalite_site as
+DROP VIEW IF EXISTS gn_monitoring.v_export_suivi_acoustique_site;
+CREATE OR REPLACE VIEW gn_monitoring.v_export_suivi_acoustique_site as
 SELECT 
 tm.module_code as protocole,
 tsg.sites_group_name AS lbParc,
@@ -60,4 +60,4 @@ join ref_geo.bib_areas_types bat
 on rfg.id_type = bat.id_type and bat.type_code = 'DEP') rfg_i_dep on true     
 left join gn_monitoring.cor_module_type cmt on cmt.id_type_site = cts.id_type_site  
 left join gn_commons.t_modules tm on tm.id_module = cmt.id_module
-WHERE tm.module_code::text = 'suivi_mortalite'
+WHERE tm.module_code::text = 'suivi_acoustique'

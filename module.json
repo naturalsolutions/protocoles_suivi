@@ -1,6 +1,6 @@
 {
-  "module_label": "Suivi de mortalité",
-  "module_desc": "Portocole de suivi de mortalité des chiroptères",
+  "module_label": "Suivi acoustique",
+  "module_desc": "Portocole de suivi acoustique des chiroptères",
   "display_properties": ["module_label", "module_desc"],
   "specific": {
     "datasets": {

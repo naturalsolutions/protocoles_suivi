@@ -1,5 +1,5 @@
-DROP VIEW IF EXISTS gn_monitoring.v_export_suivi_mortalite_visit;
-CREATE OR REPLACE VIEW gn_monitoring.v_export_suivi_mortalite_visit as
+DROP VIEW IF EXISTS gn_monitoring.v_export_suivi_acoustique_visit;
+CREATE OR REPLACE VIEW gn_monitoring.v_export_suivi_acoustique_visit as
 select tm.module_code as protocole,
     tbs.base_site_code as idEolienne,
     tbv.id_base_site,
@@ -38,7 +38,7 @@ from gn_monitoring.t_base_visits tbv
     left join gn_monitoring.cor_type_site cts on tbs.id_base_site = cts.id_base_site
     left join gn_monitoring.cor_module_type cmt on cmt.id_type_site = cts.id_type_site
     left join gn_commons.t_modules tm on tm.id_module = cmt.id_module
-where tm.module_code::text = 'suivi_mortalite'
+where tm.module_code::text = 'suivi_acoustique'
 group by tbv.id_base_site,
     tm.module_code,
     tbv.id_base_visit,
