@@ -96,13 +96,15 @@
       "type": "TYPE_ETUDE",
       "cd_nomenclature": "Pre implantation",
       "mnemonique": "PR",
-      "label_default": "Etude pré-implantation"
+      "label_default": "Etude pré-implantation",
+      "definition_default": ""
     },
     {
       "type": "TYPE_ETUDE",
       "cd_nomenclature": "Post implantantion",
       "mnemonique": "PO",
-      "label_default": "Etude post-implantation"
+      "label_default": "Etude post-implantation",
+      "definition_default": ""
     },
     {
       "type": "TYPE_REPLICAS",
