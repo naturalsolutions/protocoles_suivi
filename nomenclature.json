@@ -93,6 +93,18 @@
   ],
   "nomenclatures": [
     {
+      "type": "TYPE_ETUDE",
+      "cd_nomenclature": "Pre implantation",
+      "mnemonique": "PR",
+      "label_default": "Etude pré-implantation"
+    },
+    {
+      "type": "TYPE_ETUDE",
+      "cd_nomenclature": "Post implantantion",
+      "mnemonique": "PO",
+      "label_default": "Etude post-implantation"
+    },
+    {
       "type": "TYPE_REPLICAS",
       "cd_nomenclature": "TYPE_REPLICAS_1",
       "mnemonique": "N",
@@ -296,6 +308,20 @@
       "definition_default": ""
     },
     {
+      "type": "METHODE_IDENTIFICATION",
+      "cd_nomenclature": "METHODE_IDENTIFICATION_1",
+      "mnemonique": "A",
+      "label_default": "Automatisée",
+      "definition_default": ""
+    },
+    {
+      "type": "METHODE_IDENTIFICATION",
+      "cd_nomenclature": "METHODE_IDENTIFICATION_2",
+      "mnemonique": "M",
+      "label_default": "Manuelle en utilisant un logiciel de visualisation des cris",
+      "definition_default": ""
+    },
+    {
       "type": "LOGICIEL_ID_AUTO",
       "cd_nomenclature": "LOGICIEL_ID_AUTO_1",
       "mnemonique": "Kal",
@@ -356,6 +382,34 @@
       "cd_nomenclature": "TYPECANAL_2",
       "mnemonique": "M",
       "label_default": "Mono",
+      "definition_default": ""
+    },
+    {
+      "type": "TRIGGER",
+      "cd_nomenclature": "TRIGGER_0",
+      "mnemonique": "0",
+      "label_default": "Non",
+      "definition_default": ""
+    },
+    {
+      "type": "TRIGGER",
+      "cd_nomenclature": "TRIGGER_1",
+      "mnemonique": "1",
+      "label_default": "Oui",
+      "definition_default": ""
+    },
+    {
+      "type": "GAIN",
+      "cd_nomenclature": "GAIN_0",
+      "mnemonique": "0",
+      "label_default": "Non",
+      "definition_default": ""
+    },
+    {
+      "type": "GAIN",
+      "cd_nomenclature": "GAIN_1",
+      "mnemonique": "1",
+      "label_default": "Oui",
       "definition_default": ""
     },
     {
