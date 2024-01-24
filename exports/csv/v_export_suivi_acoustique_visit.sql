@@ -7,18 +7,96 @@ select tm.module_code as protocole,
     tbv.visit_date_min as dateDebut,
     tbv.visit_date_max as dateFin,
     ref_nomenclatures.get_nomenclature_label(
-        (tvc.data->>'id_nomenclature_forme_surface')::integer
-    ) as FormeSurface,
+        (tvc.data->>'id_nomenclature_type_etude')::integer
+    ) as TypeEtude,
     ref_nomenclatures.get_nomenclature_label(
-        (tvc.data->>'id_nomenclature_type_surface')::integer
-    ) as TypeSurface,
-    ref_nomenclatures.get_nomenclature_label((tvc.data->>'id_type_donnee')::integer) as TypeDonnee,
-    tvc.data->>'heure_debut_recherche' as DureeRecherche,
-    tvc.data->>'longueur_surface' as LongSurface,
-    tvc.data->>'surface_recherche' as SurfRecherche,
-    tvc.data->>'surface_veg' as SurfaceVeg,
-    tvc.data->>'hauteur_moyenne_veg' as HauteurMoyVeg,
-    tvc.data->>'pourcentage_foret' as PourForet,
+        (tvc.data->>'id_nomenclature_type_replicas')::integer
+    ) as TypeReplicas,
+    tvc.data->>'heure_debut_recherche' as HeureDebRecherche,
+    tvc.data->>'heure_fin_recherche' as HeureFinRecherche,
+    ref_nomenclatures.get_nomenclature_label(
+        (tvc.data->>'id_nomenclature_presence_acoustique')::integer
+    ) as PresAcoustique,
+    tvc.data->>'hauteur' as hauteur,
+    ref_nomenclatures.get_nomenclature_label(
+        (tvc.data->>'id_nomenclature_type_hauteur')::integer
+    ) as TypeHauteur,
+    ref_nomenclatures.get_nomenclature_label(
+        (tvc.data->>'id_nomenclature_position_nacelle')::integer
+    ) as PosNacelle,
+    ref_nomenclatures.get_nomenclature_label(
+        (
+            tvc.data->>'id_nomenclature_evaluation_pluie_tranche'
+        )::integer
+    ) as EvalPluieTranche,
+    tvc.data->>'pluie_tranche' as pluietranche,
+    ref_nomenclatures.get_nomenclature_label(
+        (
+            tvc.data->>'    "id_nomenclature_evaluation_vent_moy_tranche": {
+'
+        )::integer
+    ) as EvalVentMoyTranche,
+
+    tvc.data->>'vitesse_moy_tranche' as VitesseMoyTranche,
+    ref_nomenclatures.get_nomenclature_label(
+        (
+            tvc.data->>'id_nomenclature_evaluation_vitesse_eolienne'
+        )::integer
+    ) as EvalVitesseEol,
+    tvc.data->>'vitesse_eolienne' as vitesseEol,
+    ref_nomenclatures.get_nomenclature_label(
+        (
+            tvc.data->>'id_nomenclature_methode_etude'
+        )::integer
+    ) as MethodeEtude,
+    ref_nomenclatures.get_nomenclature_label(
+        (
+            tvc.data->>'id_nomenclature_type_enregistrement'
+        )::integer
+    ) as TypeEnregistrement,
+    ref_nomenclatures.get_nomenclature_label(
+        (
+            tvc.data->>'id_nomenclature_type_identification'
+        )::integer
+    ) as TypeIdentification,
+    ref_nomenclatures.get_nomenclature_label(
+        (
+            tvc.data->>'id_nomenclature_methode_identification'
+        )::integer
+    ) as MethIdentification,
+    ref_nomenclatures.get_nomenclature_label(
+        (
+            tvc.data->>'id_nomenclature_logiciel_id_auto'
+        )::integer
+    ) as LogicielIdAuto,
+    tvc.data->>'autre_logiciel_id_auto' as AutreLogicielIdAuto,
+    ref_nomenclatures.get_nomenclature_label(
+        (
+            tvc.data->>'id_nomenclature_type_canal'
+        )::integer
+    ) as TypeCanal,
+    tvc.data->>'decoupage_fichier' as DecoupageFichier,
+    tvc.data->>'duree_decoupage_fichier' as DureeDecoupageFichier,
+    tvc.data->>'age_micro' as AgeMicro,
+    tvc.data->>'freq_min' as FreqMin,
+    tvc.data->>'freq_max' as FreqMax,
+    tvc.data->>'trigger_used' as trigger,
+    tvc.data->>'trigger_decibel' as TriggerDecibel,
+    tvc.data->>'gain_used' as Gain,
+    tvc.data->>'gain' as GainValue,
+    tvc.data->>'intervalle_cris_max' as IntervalCrisMax,
+    ref_nomenclatures.get_nomenclature_label(
+        (
+            tvc.data->>'id_nomenclature_modele_materiel'
+        )::integer
+    ) as ModeleMateriel,
+    tvc.data->>'modele_autre' as ModeleAutre,
+    ref_nomenclatures.get_nomenclature_label(
+        (
+            tvc.data->>'id_nomenclature_type_duree'
+        )::integer
+    ) as TypeDuree,
+    tvc.data->>'score' as score,
     string_agg(
         distinct concat (UPPER(tr.nom_role), ' ', tr.prenom_role),
         ', '
@@ -38,7 +116,7 @@ from gn_monitoring.t_base_visits tbv
     left join gn_monitoring.cor_type_site cts on tbs.id_base_site = cts.id_base_site
     left join gn_monitoring.cor_module_type cmt on cmt.id_type_site = cts.id_type_site
     left join gn_commons.t_modules tm on tm.id_module = cmt.id_module
-where tm.module_code::text = 'suivi_acoustique'
+where tm.module_code::text = :module_code
 group by tbv.id_base_site,
     tm.module_code,
     tbv.id_base_visit,
