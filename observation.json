@@ -49,13 +49,13 @@
       "type_widget": "medias",
       "attribut_label": "Médias",
       "schema_dot_table": "gn_monitoring.t_observations"
-    },
-    "change": [
-      "({objForm, meta}) => {",
-        "if (objForm.controls['id_nomenclature_presence_acoustique'].value != meta.parents.module.config.id_presence_acoustique_1) {",
-          "objForm.patchValue( {'cd_nom':null});",
-      "}",
-      "}"
-    ]
-  }
+    }
+  },
+  "change": [
+    "({objForm, meta}) => {",
+      "if (objForm.controls['id_nomenclature_presence_acoustique'].value != meta.parents.module.config.id_presence_acoustique_1) {",
+        "objForm.patchValue( {'cd_nom':null});",
+    "}",
+    "}"
+  ]
 }

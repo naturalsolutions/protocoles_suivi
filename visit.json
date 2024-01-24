@@ -141,7 +141,7 @@
       "data_path": "values",
       "type_util": "nomenclature",
       "required": "({value, meta}) => [ meta.parents.module.config.id_nomenclature_type_hauteur_nac].includes(value.id_nomenclature_type_hauteur)",
-      "hidden": "({value, meta}}) => ![ meta.parents.module.config.id_nomenclature_type_hauteur_nac].includes(value.id_nomenclature_type_hauteur)",
+      "hidden": "({value, meta}) => ![ meta.parents.module.config.id_nomenclature_type_hauteur_nac].includes(value.id_nomenclature_type_hauteur)",
       "multiple": false,
       "definition": "Position verticale du microphone par rapport à la nacelle pour les enregistrements en nacelle"
     },
@@ -188,7 +188,7 @@
       "attribut_label": "Quantité de précipitation (mm/h) ",
       "definition": "Quantité de précipitation sur la tranche horaire en mm/h",
       "required": "({value, meta}) => [ meta.parents.module.config.id_nomenclature_eval_pluie_tranche_f].includes(value.id_nomenclature_evaluation_pluie_tranche)",
-      "hidden": "({value, meta}}) => ![ meta.parents.module.config.id_nomenclature_eval_pluie_tranche_f].includes(value.id_nomenclature_evaluation_pluie_tranche)",
+      "hidden": "({value, meta}) => ![ meta.parents.module.config.id_nomenclature_eval_pluie_tranche_f].includes(value.id_nomenclature_evaluation_pluie_tranche)",
       "min":0
     },
     "id_nomenclature_evaluation_vent_moy_tranche": {
@@ -234,7 +234,7 @@
       "attribut_label": "Vitesse de vent moyenne (m/s)",
       "definition": "Vitesse de vent moyenne sur la tranche horaire en m/s",
       "required": "({value, meta}) => [ meta.parents.module.config.id_nomenclature_eval_vent_moy_tranche_f].includes(value.id_nomenclature_evaluation_vent_moy_tranche)",
-      "hidden": "({value, meta}}) => ![ meta.parents.module.config.id_nomenclature_eval_vent_moy_tranche_f].includes(value.id_nomenclature_evaluation_vent_moy_tranche)",
+      "hidden": "({value, meta}) => ![ meta.parents.module.config.id_nomenclature_eval_vent_moy_tranche_f].includes(value.id_nomenclature_evaluation_vent_moy_tranche)",
       "min":0
     },
     "id_nomenclature_evaluation_vitesse_eolienne": {
@@ -280,7 +280,7 @@
       "attribut_label": "Vitesse éolienne (km/h)",
       "definition": "Vitesse de rotation en bout de pale au moment de l'enregistrement en km/h",
       "required": "({value, meta}) => [ meta.parents.module.config.id_nomenclature_eval_vitesse_eol_f].includes(value.id_nomenclature_evaluation_vitesse_eolienne)",
-      "hidden": "({value, meta}}) => ![ meta.parents.module.config.id_nomenclature_eval_vitesse_eol_f].includes(value.id_nomenclature_evaluation_vitesse_eolienne)",
+      "hidden": "({value, meta}) => ![ meta.parents.module.config.id_nomenclature_eval_vitesse_eol_f].includes(value.id_nomenclature_evaluation_vitesse_eolienne)",
       "min":0
     },
     "id_nomenclature_methode_etude": {
@@ -321,7 +321,7 @@
       "multiple": false,
       "definition":"Méthode d'identification pour les écoutes manuelles",
       "required": "({value, meta}) => [ meta.parents.module.config.id_nomenclature_type_enregistrement_em].includes(value.id_nomenclature_type_enregistrement)",
-      "hidden": "({value, meta}}) => ![ meta.parents.module.config.id_nomenclature_type_enregistrement_em].includes(value.id_nomenclature_type_enregistrement)"
+      "hidden": "({value, meta}) => ![ meta.parents.module.config.id_nomenclature_type_enregistrement_em].includes(value.id_nomenclature_type_enregistrement)"
     },
     "id_nomenclature_methode_identification": {
       "type_widget": "datalist",
@@ -335,7 +335,7 @@
       "multiple": false,
       "definition":"Méthode d'identification informatique",
       "required": "({value, meta}) => [ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)",
-      "hidden": "({value, meta}}) => ![ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)"
+      "hidden": "({value, meta}) => ![ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)"
     },
     "id_nomenclature_logiciel_id_auto": {
       "type_widget": "datalist",
@@ -349,14 +349,14 @@
       "multiple": false,
       "definition":"Nom du logiciel d'identification automatique utilisé",
       "required": "({value, meta}) => [ meta.parents.module.config.id_nomenclature_methode_id_a].includes(value.id_nomenclature_methode_identification)",
-      "hidden": "({value, meta}}) => ![ meta.parents.module.config.id_nomenclature_methode_id_a].includes(value.id_nomenclature_methode_identification)"
+      "hidden": "({value, meta}) => ![ meta.parents.module.config.id_nomenclature_methode_id_a].includes(value.id_nomenclature_methode_identification)"
     },
     "autre_logiciel_id_auto": {
       "type_widget": "text",
       "attribut_label": "Nom de l'autre logiciel d'identification utilisé",
       "definition": "Autre logiciel d'identification utilisé",
       "required": "({value, meta}) => [ meta.parents.module.config.id_nomenclature_logiciel_id_auto_au].includes(value.id_nomenclature_logiciel_id_auto)",
-      "hidden": "({value, meta}}) => ![ meta.parents.module.config.id_nomenclature_logiciel_id_auto_au].includes(value.id_nomenclature_logiciel_id_auto)"
+      "hidden": "({value, meta}) => ![ meta.parents.module.config.id_nomenclature_logiciel_id_auto_au].includes(value.id_nomenclature_logiciel_id_auto)"
     },
     "id_nomenclature_type_canal": {
       "type_widget": "datalist",
@@ -370,7 +370,7 @@
       "multiple": false,
       "definition":"Indique si l'enregistrement autonome a été réalisé en stéréo ou en mono.",
       "required": "({value, meta}) => [ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)",
-      "hidden": "({value, meta}}) => ![ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)"
+      "hidden": "({value, meta}) => ![ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)"
 
     },
     "decoupage_fichier": {
@@ -435,7 +435,7 @@
       "attribut_label": "Utilisation d'un trigger ?",
       "values": ["Oui", "Non"],
       "required": "({value, meta}) => [ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)",
-      "hidden": "({value, meta}}) => ![ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)",
+      "hidden": "({value, meta}) => ![ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)",
       "definition": "Utilisation ou non d'un déclencheur (Trigger) de l'enregistrement (champ obligatoire)"
     },
     "trigger_decibel": {
@@ -451,7 +451,7 @@
       "attribut_label": "Utilisation d'un gain pré-ampli ?",
       "values": ["Oui", "Non"],
       "required": "({value, meta}) => [ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)",
-      "hidden": "({value, meta}}) => ![ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)",
+      "hidden": "({value, meta}) => ![ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)",
       "definition": "Indique si une augmentation du gain du pré-ampli a été utilisé (champ obligatoire)"
     },
     "gain": {
@@ -468,7 +468,7 @@
       "definition": "Intervalle maximum entre deux cris (s)",
       "min":0,
       "required": "({value, meta}) => [ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)",
-      "hidden": "({value, meta}}) => ![ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)"
+      "hidden": "({value, meta}) => ![ meta.parents.module.config.id_nomenclature_type_enregistrement_ea].includes(value.id_nomenclature_type_enregistrement)"
     },
     "id_nomenclature_modele_materiel": {
       "type_widget": "datalist",
@@ -488,7 +488,7 @@
       "attribut_label": "Autre modèle",
       "definition": "Si ModMat = 45 saisir le modèle et la marque séparés d'une virgule. Exemple : SM2BAT, Wildlife Acoustics",
       "required": "({value, meta}) => [ meta.parents.module.config.id_nomenclature_model_materiel_45].includes(value.id_nomenclature_modele_materiel)",
-      "hidden": "({value, meta}}) => ![ meta.parents.module.config.id_nomenclature_model_materiel_45].includes(value.id_nomenclature_modele_materiel)"
+      "hidden": "({value, meta}) => ![ meta.parents.module.config.id_nomenclature_model_materiel_45].includes(value.id_nomenclature_modele_materiel)"
 
     },
     "id_nomenclature_type_duree": {
@@ -532,15 +532,15 @@
           "return false",
         "}"
       ] 
-    },
-  "change": [
-    "({objForm, meta}) => {",
-    "const journee_date_fin = objForm.value.visit_date_min;",
-    "if (objForm.controls.visit_date_min.valid) {",
-    "objForm.patchValue({'visit_date_max':journee_date_fin})",
-    "}",
-    "}",
-    ""
-  ]
-}
+    }
+},
+"change": [
+  "({objForm, meta}) => {",
+  "const journee_date_fin = objForm.value.visit_date_min;",
+  "if (objForm.controls.visit_date_min.valid) {",
+  "objForm.patchValue({'visit_date_max':journee_date_fin})",
+  "}",
+  "}",
+  ""
+]
 }
