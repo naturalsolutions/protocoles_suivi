@@ -737,7 +737,7 @@
       "definition_default": ""
     },
     {
-      "type": "LOGICIEL_ID_AUTO",
+      "type": "MODELE_MATERIEL",
       "cd_nomenclature": "MODELE_MATERIEL_45",
       "mnemonique": "45",
       "label_default": "Autre",
