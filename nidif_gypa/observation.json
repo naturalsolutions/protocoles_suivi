@@ -3,7 +3,7 @@
     "count",
     "id_nomenclature_sex",
     "id_nomenclature_life_stage",
-    "id_nomenclature_behaviour",
+    "comportement",
     "indiv_a_aire",
     "chargement_aire",
     "bague_plastique",
@@ -13,7 +13,7 @@
   ],
   "display_list" : [
     "count",
-    "id_nomenclature_behaviour"
+    "comportement"
   ],
   "redirect_to_parent": true,
   "specific": {
@@ -52,19 +52,38 @@
       "cd_nomenclatures": ["1", "2", "3", "4", "5"]
 
     },
-    "id_nomenclature_behaviour": {
-      "type_widget": "nomenclature",
+    "comportement": {
+      "type_widget": "multiselect",
       "attribut_label": "Comportement",
-      "code_nomenclature_type": "OCC_COMPORTEMENT",
-      "type_util": "nomenclature",
       "required": true,
-      "value": {
-        "code_nomenclature_type": "OCC_COMPORTEMENT",
-        "cd_nomenclature": "1"
-      },
-      "cd_nomenclatures": ["17", "1", "4", "8", "9", "10", "14", "15", "19", "21", "22", "23"]
-
+      "values": [
+         "Accouplement",
+         "Aire vide",
+         "Couvaison",
+         "Jeune envolé",
+         "Pond",
+         "Posé",
+         "Nourrissage des jeunes",
+         "Recharge de l'aire",
+         "Relève à l'aire",
+         "Passage en vol",
+         "Tandem",
+         "Territorial"
+      ]
   },
+  "id_nomenclature_behaviour": {
+    "type_widget": "nomenclature",
+    "attribut_label": "Comportement",
+    "code_nomenclature_type": "OCC_COMPORTEMENT",
+    "type_util": "nomenclature",
+    "required": true,
+    "value": {
+      "code_nomenclature_type": "OCC_COMPORTEMENT",
+      "cd_nomenclature": "1"
+    },
+    "cd_nomenclatures": ["17", "1", "4", "8", "9", "10", "14", "15", "19", "21", "22", "23"]
+
+},
     "count": {
       "type_widget": "number",
       "attribut_label": "Nombre d'individus",
@@ -85,11 +104,6 @@
     "indiv_a_aire": {
       "type_widget": "bool_checkbox",
       "attribut_label": "Individu à l'aire ?",
-      "value": false
-      },
-    "chargement_aire": {
-      "type_widget": "bool_checkbox",
-      "attribut_label": "Chargement de l'aire",
       "value": false
       }
   }
