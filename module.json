@@ -10,20 +10,5 @@
       "required": false,
       "multi_select": true
     }
-  },
-  "id_nomenclature_presence_acoustique_1":"676",
-  "id_nomenclature_type_etude_pre_implantation": "670",
-  "id_nomenclature_type_etude_post_implantation":"671",
-  "id_nomenclature_type_hauteur_nac":"678",
-  "id_nomenclature_type_hauteur_matmes":"679",
-  "id_nomenclature_type_hauteur_mat":"680",
-  "id_nomenclature_eval_pluie_tranche_f":"686",
-  "id_nomenclature_eval_vent_moy_tranche_f":"689",
-  "id_nomenclature_eval_vitesse_eol_f":"692",
-  "id_nomenclature_type_enregistrement_em":"698",
-  "id_nomenclature_type_enregistrement_ea":"697",
-  "id_nomenclature_type_id_vi":"700",
-  "id_nomenclature_methode_id_a":"701",
-  "id_nomenclature_logiciel_id_auto_au":"709",
-  "id_nomenclature_model_materiel_45":"763"
+  }
 }

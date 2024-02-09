@@ -35,13 +35,13 @@
       "application": "TaxHub",
       "type_util": "taxonomy",
       "required": true,
-      "hidden": "({value}) => value.id_nomenclature_presence_acoustique != meta.parents.module.config.id_presence_acoustique_1"
+      "hidden": "({value}) => value.id_nomenclature_presence_acoustique != 676"
     },
     "list_cd_nom": {
       "type_widget": "txt",
       "attribut_label": "Liste de cd_nom",
-      "required": "({value}) => value.id_nomenclature_presence_acoustique == meta.parents.module.config.id_presence_acoustique_1",
-      "hidden": "({value}) => value.id_nomenclature_presence_acoustique != meta.parents.module.config.id_presence_acoustique_1",
+      "required": "({value}) => value.id_nomenclature_presence_acoustique == 676",
+      "hidden": "({value}) => value.id_nomenclature_presence_acoustique != 676",
       "definition": "il s'agit de lister les codes 'cd_nom' des espèces constituant le groupe d'espèces possibles pour l'observation en les séparant par une virgule. Par exemple si l'observateur ne peut pas affirmer que la séquence acoustique provient d'un individu de Pipistrellus kuhlii ou Pipistrellus nathusii, il faudra saisir:  79303, 60490"
     },
     "medias": {
@@ -53,7 +53,7 @@
   },
   "change": [
     "({objForm, meta}) => {",
-      "if (objForm.controls['id_nomenclature_presence_acoustique'].value != meta.parents.module.config.id_presence_acoustique_1) {",
+      "if (objForm.controls['id_nomenclature_presence_acoustique'].value != 676) {",
         "objForm.patchValue( {'cd_nom':null});",
     "}",
     "}"
