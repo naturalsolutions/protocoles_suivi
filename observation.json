@@ -34,15 +34,15 @@
     "heure_obs": {
       "type_widget": "time",
       "attribut_label": "Heure observation",
-      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
-      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796"
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 668",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 668"
     },
     "ditance_eol": {
       "type_widget": "number",
       "attribut_label": "Distance à l'éolienne la plus proche",
       "definition": "Distance en mètre ",
-      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
-      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796",
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 668",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 668",
       "min":0
     },
     "id_nomenclature_type_colision": {
@@ -50,31 +50,31 @@
       "attribut_label": "Type de collision",
       "code_nomenclature_type": "TYPE_COLISION",
       "type_util": "nomenclature",
-      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
-      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796"
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 668",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 668"
     },
     "id_nomenclature_etat_cadavre": {
       "type_widget": "nomenclature",
       "attribut_label": "Etat du cadavre",
       "code_nomenclature_type": "ETAT_CADAVRE",
       "type_util": "nomenclature",
-      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
-      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796"
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 668",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 668"
     },
     "id_nomenclature_presence_foret": {
       "type_widget": "nomenclature",
       "attribut_label": "Présence forêt",
       "code_nomenclature_type": "PRES_FORET",
       "type_util": "nomenclature",
-      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
-      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796"
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 668",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 668"
     },
     "hauteur_veg": {
       "type_widget": "number",
       "attribut_label": "Hauteur de la végétation",
       "definition": "Hauteur de la végétation herbacée à buissonnante à l'emplacement  du cadavre en centimètres",
-      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
-      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796",
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 668",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 668",
       "min":0
     },
     "cd_nom": {
@@ -87,7 +87,7 @@
       "application": "TaxHub",
       "type_util": "taxonomy",
       "required": true,
-      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796"
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 668"
     },
     "id_nomenclature_sex": {
       "type_widget": "datalist",
@@ -98,8 +98,8 @@
       "keyLabel": "label_fr",
       "data_path": "values",
       "type_util": "nomenclature",
-      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
-      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796",
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 668",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 668",
       "filters": { "cd_nomenclature": ["1", "2", "3"] }
     },
     "id_nomenclature_bio_status": {
@@ -111,8 +111,8 @@
       "keyLabel": "label_fr",
       "data_path": "values",
       "type_util": "nomenclature",
-      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
-      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796",
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 668",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 668",
       "filters": {
         "cd_nomenclature": ["3", "9", "2"]
       }
@@ -126,8 +126,8 @@
       "keyLabel": "label_fr",
       "data_path": "values",
       "type_util": "nomenclature",
-      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
-      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796",
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 668",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 668",
       "filters": {
         "cd_nomenclature": ["1", "2", "3"]
       }
@@ -137,14 +137,14 @@
       "attribut_label": "Dénombrement (minimum)",
       "min": 1,
       "value": 1,
-      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
-      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796"
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 668",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 668"
     },
     "count_max": {
       "type_widget": "number",
       "attribut_label": "Dénombrement (maximum)",
-      "required": "({value}) => value.id_nomenclature_presence_cadavre == 796",
-      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 796",
+      "required": "({value}) => value.id_nomenclature_presence_cadavre == 668",
+      "hidden": "({value}) => value.id_nomenclature_presence_cadavre != 668",
       "min": "({value}) => value.count_min"
     },
     "medias": {
@@ -156,7 +156,7 @@
   },
   "change": [
     "({objForm, meta}) => {",
-      "if (objForm.controls['id_nomenclature_presence_cadavre'].value != 796) {",
+      "if (objForm.controls['id_nomenclature_presence_cadavre'].value != 668) {",
         "objForm.patchValue( {'cd_nom':null});",
     "}",
     "}"
