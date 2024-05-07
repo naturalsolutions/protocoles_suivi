@@ -1,0 +1,67 @@
+{
+  "genre":"F",
+  "label": "Zone d'intervention",
+  "label_list": "Zones d'intervention",
+  "sorts": [
+    {"prop": "base_site_name", "dir": "asc"}
+  ],
+  "display_properties": [
+    "base_site_code",
+    "base_site_name",
+    "id_inventor",
+    "observers",
+    "first_use_date",
+    "base_site_description"
+  ],
+  "display_list": [
+    "base_site_name",
+    "base_site_code",
+    "observers"
+  ],
+  "map_label_field_name": "base_site_name",
+  "geometry_type": "Polygon",
+  "specific": {
+    "id_sites_group": {
+      "type_widget": "text",
+      "attribut_label": "Groupe de sites (CAT)",
+      "required": false,
+      "hidden": true
+    },
+    "id_inventor": {
+      "attribut_label": "Numérisateur",
+      "required": true,
+      "hidden": true
+    },
+    "observers": {
+      "attribut_label": "Conseiller CAT",
+      "type_widget": "observers",
+      "type_util": "user",
+      "code_list": "liste_conseiller_cat",
+      "application": "GeoNature",
+      "keyValue": "id_role",
+      "keyLabel": "nom_complet",
+      "multiple": true,
+      "required": true
+    },
+    "first_use_date": {
+      "attribut_label": "Date d'observation",
+      "required": true
+    },
+    "base_site_name": {
+      "attribut_label": "Nom de la zone d'intervention",
+      "type_widget": "text",
+      "required": true
+    },
+    "base_site_code": {
+      "attribut_label": "Code de la zone d'intervention",
+      "type_widget": "text",
+      "required": true
+    },
+    "medias": {
+      "hidden": false,
+      "type_widget": "Photographies",
+      "attribut_label": "Médias : précisez l'orientation de votre photo dans le titre (nord / sud / est / ouest)",
+      "schema_dot_table": "gn_monitoring.t_base_sites"
+    }
+  }
+}

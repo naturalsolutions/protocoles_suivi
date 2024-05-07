@@ -1,0 +1,19 @@
+{
+    "module_label":"Protocole - Gestion CAT",
+    "module_desc":"Module GESTION CAT",
+    "export_csv": [
+      { "label": "Export csv gestion cat", "type": "csv", "method": "visits", "filter_dataset": true}
+    ],
+    "permission_objects": [
+      "GNM_SITES",
+      "GNM_VISITES"
+    ],
+    "ids_diagnostic_suivi": [
+      1026,
+      1024
+    ],
+    "id_diagnostic": [1025],
+    "id_suivi": [1024],
+    "id_intervention": [1026]
+}
+

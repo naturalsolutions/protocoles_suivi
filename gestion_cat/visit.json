@@ -1,0 +1,308 @@
+{
+  "display_properties": [
+    "visit_observers",
+    "visit_date_min",
+    "visit_date_max",
+    "id_base_site",
+    "date_sollicitation",
+    "nb_observations",
+    "type_sollicitation",
+    "id_type_visite",
+    "comments",
+    "id_dataset"
+  ],
+  "display_list": [
+    "id_base_visit",
+    "visit_date_min",
+    "visit_observers"
+  ],
+  "specific": {
+    "visit_observers": {
+      "attribut_label": "Conseiller(s) CAT",
+      "type_widget": "observers",
+      "type_util": "user",
+      "code_list": "liste_gestionnaire",
+      "application": "GeoNature",
+      "keyValue": "id_role",
+      "keyLabel": "nom_complet",
+      "multiple": true,
+      "required": true
+    },
+    "visit_date_min": {
+      "attribut_label": "Date de début"
+    },
+    "visit_date_max": {
+      "attribut_label": "Date de fin",
+      "hidden":false
+    },
+    "id_base_site": {
+      "type_widget": "site",
+      "required": true,
+      "attribut_label": "Choix du site"
+    },
+    "date_sollicitation": {
+      "attribut_label": "Date de  la sollicitation",
+      "type_widget": "date",
+      "required":false
+    },
+    "type_sollicitation": {
+      "attribut_label": "Type de sollicitation",
+      "type_widget": "text",
+      "required":false
+    },
+    "id_type_visite": {
+      "type_widget": "datalist",
+      "attribut_label": "Types de visite",
+      "api": "nomenclatures/nomenclature/TYPE_VISITE",
+      "application": "GeoNature",
+      "keyValue": "id_nomenclature",
+      "keyLabel": "label_fr",
+      "data_path": "values",
+      "type_util": "nomenclature",
+      "required": true,
+      "multiple": false,
+      "definition": "Indique le type de visite et rend les champs conditionnels ."
+    },
+    "details_pratique_gestion": {
+      "type_widget": "text",
+      "attribut_label": "Détails pratique de gestion constatée",
+      "required": false,
+      "hidden": [
+        "({value, meta}) => {",
+          "if (meta.parents.module.config.id_diagnostic.includes(value.id_type_visite)) {",
+            "return false",
+          "}",
+          "return true",
+        "}"
+      ]
+    },
+    "ajout_pratique_gestion": {
+      "type_widget": "radio",
+      "values": ["Oui", "Non"],
+      "attribut_label": "Voulez vous ajouter une pratique de gestion ?",
+      "required": false,
+      "hidden": [
+        "({value, meta}) => {",
+          "if (meta.parents.module.config.id_diagnostic.includes(value.id_type_visite)) {",
+            "return false",
+          "}",
+          "return true",
+        "}"
+      ]
+    },
+    "id_suite_a_donner_cat": {
+      "type_widget": "datalist",
+      "attribut_label": "Suite à donner CAT",
+      "api": "nomenclatures/nomenclature/SUITE_A_DONNER_CAT",
+      "application": "GeoNature",
+      "keyValue": "id_nomenclature",
+      "keyLabel": "label_fr",
+      "data_path": "values",
+      "type_util": "nomenclature",
+      "multiple": true,
+      "required": "({value, meta}) => value.id_type_visite ==  meta.parents.module.config.id_diagnostic[0]",
+      "hidden": [
+        "({value, meta}) => {",
+          "if (meta.parents.module.config.id_diagnostic.includes(value.id_type_visite)) {",
+            "return false",
+          "}",
+          "return true",
+        "}"
+      ]
+    },
+    "id_action_cat": {
+      "type_widget": "datalist",
+      "attribut_label": "Action CAT",
+      "api": "nomenclatures/nomenclature/ACTION_CAT",
+      "application": "GeoNature",
+      "keyValue": "id_nomenclature",
+      "keyLabel": "label_fr",
+      "data_path": "values",
+      "type_util": "nomenclature",
+      "multiple": true,
+      "required": "({value, meta}) => value.id_type_visite ==  meta.parents.module.config.id_intervention[0]",
+      "hidden": "({value, meta}) => value.id_type_visite !=  meta.parents.module.config.id_intervention[0]"
+    },
+    "id_nature_travaux": {
+      "type_widget": "datalist",
+      "attribut_label": "Nature des travaux",
+      "api": "nomenclatures/nomenclature/NATURE_TRAVAUX",
+      "application": "GeoNature",
+      "keyValue": "id_nomenclature",
+      "keyLabel": "label_fr",
+      "data_path": "values",
+      "type_util": "nomenclature",
+      "multiple": true,
+      "required": "({value, meta}) => value.id_type_visite ==  meta.parents.module.config.id_intervention[0]",
+      "hidden": "({value, meta}) => value.id_type_visite !=  meta.parents.module.config.id_intervention[0]"
+    },
+    "participants": {
+      "type_widget": "text",
+      "attribut_label": "Participants",
+      "required": false,
+      "hidden": "({value, meta}) => value.id_type_visite !=  meta.parents.module.config.id_intervention[0]"
+    },
+    "description_travaux": {
+      "type_widget": "textarea",
+      "attribut_label": "Description des travaux",
+      "required": false,
+      "hidden": "({value, meta}) => value.id_type_visite !=  meta.parents.module.config.id_intervention[0]"
+    },
+    "observers": {
+      "attribut_label": "Observateurs complémentaires",
+      "type_widget": "observers",
+      "type_util": "user",
+      "code_list": "liste_observateurs_supp",
+      "application": "GeoNature",
+      "keyValue": "id_role",
+      "keyLabel": "nom_complet",
+      "multiple": true,
+      "required": true
+    },
+    "etat_hydrologique": {
+      "type_widget": "textarea",
+      "attribut_label": "Etat hydrologique ",
+      "required": false,
+      "hidden": [
+        "({value, meta}) => {",
+          "if (meta.parents.module.config.ids_diagnostic_suivi.includes(value.id_type_visite)) {",
+            "return false",
+          "}",
+          "return true",
+        "}"
+      ]
+    },
+    "etat_conservation_fonctionnalites": {
+      "type_widget": "textarea",
+      "attribut_label": "Etat de conservation et fonctionnalités",
+      "required": false,
+      "hidden": [
+        "({value, meta}) => {",
+          "if (meta.parents.module.config.ids_diagnostic_suivi.includes(value.id_type_visite)) {",
+            "return false",
+          "}",
+          "return true",
+        "}"
+      ]
+    },
+    "perturbations_menaces": {
+      "type_widget": "textarea",
+      "attribut_label": "Perturbations et menaces",
+      "required": false,
+      "hidden": [
+        "({value, meta}) => {",
+          "if (meta.parents.module.config.ids_diagnostic_suivi.includes(value.id_type_visite)) {",
+            "return false",
+          "}",
+          "return true",
+        "}"
+      ]
+    },
+    "id_pratique_de_gestion": {
+      "type_widget": "datalist",
+      "attribut_label": "Type réplicas",
+      "api": "nomenclatures/nomenclature/PRATIQUE_GESTION",
+      "application": "GeoNature",
+      "keyValue": "id_nomenclature",
+      "keyLabel": "label_fr",
+      "data_path": "values",
+      "type_util": "nomenclature",
+      "multiple": false,
+      "required": "({value, meta}) => meta.parents.module.config.ids_diagnostic_suivi.includes(value.id_type_visit)",
+      "hidden": [
+        "({value, meta}) => {",
+          "if (meta.parents.module.config.ids_diagnostic_suivi.includes(value.id_type_visite)) {",
+            "return false",
+          "}",
+          "return true",
+        "}"
+      ]
+    },
+    "id_preconisations": {
+      "type_widget": "datalist",
+      "attribut_label": "Préconisations",
+      "api": "nomenclatures/nomenclature/PRECONISATIONS",
+      "application": "GeoNature",
+      "keyValue": "id_nomenclature",
+      "keyLabel": "label_fr",
+      "data_path": "values",
+      "type_util": "nomenclature",
+      "multiple": true,
+      "required": "({value, meta}) => meta.parents.module.config.ids_diagnostic_suivi.includes(value.id_type_visit)",
+      "hidden": [
+        "({value, meta}) => {",
+          "if (meta.parents.module.config.ids_diagnostic_suivi.includes(value.id_type_visite)) {",
+            "return false",
+          "}",
+          "return true",
+        "}"
+      ]
+    },
+    "details_preconisations": {
+      "type_widget": "textarea",
+      "attribut_label": "Détails préconisations",
+      "required": "({value, meta}) => meta.parents.module.config.ids_diagnostic_suivi.includes(value.id_type_visit)",
+      "hidden": [
+        "({value, meta}) => {",
+        "console.log(value)",
+          "if (meta.parents.module.config.ids_diagnostic_suivi.includes(value.id_type_visite)) {",
+            "return false",
+          "}",
+          "return true",
+        "}"
+      ]
+    },
+    "questions_besoins_gestionnaire": {
+      "type_widget": "textarea",
+      "attribut_label": "Questions/besoins gestionnaire",
+      "required": false
+    },
+    "comments": {
+      "type_widget": "textarea",
+      "attribut_label": "Remarques",
+      "required":false
+    },
+    "conclusion": {
+      "type_widget": "textarea",
+      "attribut_label": "Conclusion",
+      "required": false,
+      "hidden": [
+        "({value, meta}) => {",
+          "if (meta.parents.module.config.ids_diagnostic_suivi.includes(value.id_type_visite)) {",
+            "return false",
+          "}",
+          "return true",
+        "}"
+      ]
+    },
+    "medias": {
+      "hidden": false,
+      "type_widget": "Photographie",
+      "attribut_label": "Médias : précisez l'orientation de votre photo dans le titre (nord / sud / est / ouest)",
+      "description":"Un seul média autorisé",
+      "schema_dot_table": "gn_monitoring.t_base_visits"
+    },
+    "id_dataset": {
+      "hidden": false
+    }
+  },
+  "change": [
+    "({ objForm, meta }) => {",
+    "if (objForm.controls['visit_date_min'].value != null &&",
+        "objForm.controls['visit_date_max'].value != null) {",
+        "var debutDate = objForm.controls['visit_date_min'].value;",
+        "var finDate = objForm.controls['visit_date_max'].value;",
+        "const dateMin = new Date(debutDate.year, debutDate.month - 1, debutDate.day);",
+        "const dateMax = new Date(finDate.year, finDate.month - 1, finDate.day);",
+        "console.log(dateMin, dateMax);",
+        "if (dateMin > dateMax) {",
+            "objForm.controls['visit_date_max'].setValue(debutDate);",
+        "}",
+    "}",
+    "else if (objForm.controls['visit_date_min'].value != null &&",
+    "objForm.controls['visit_date_max'].value == null) {",
+    "objForm.controls['visit_date_max'].setValue(objForm.controls['visit_date_min'].value);",
+    "}",
+"}"
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "types": [
+    {
+      "mnemonique": "TYPE_VISITE",
+      "label_default": "Type de visite",
+      "definition_default": "Type de visite"
+    },
+    {
+      "mnemonique": "SUITE_A_DONNER_CAT",
+      "label_default": "Suite à donner CAT",
+      "definition_default": "Suite à donner CAT"
+    },
+    {
+      "mnemonique": "ACTION_CAT",
+      "label_default": "Action CAT",
+      "definition_default": "Action CAT"
+    },
+    {
+      "mnemonique": "NATURE_TRAVAUX",
+      "label_default": "Nature des travaux",
+      "definition_default": "Nature des travaux"
+    }
+    ,
+    {
+      "mnemonique": "PRATIQUE_GESTION",
+      "label_default": "Pratique gestion",
+      "definition_default": "Pratique gestion"
+    }
+    ,
+    {
+      "mnemonique": "PRECONISATIONS",
+      "label_default": "Préconisations",
+      "definition_default": "Préconisations"
+    }
+  ],
+  "nomenclatures": [
+    {
+      "type":"TYPE_VISITE",
+      "cd_nomenclature": "SUIVI",
+      "mnemonique": "Suivi",
+      "label_default": "Suivi",
+      "definition_default": "Suivi"
+    },
+    {
+      "type":"TYPE_VISITE",
+      "cd_nomenclature": "DIAGNOSTIC",
+      "mnemonique": "Diagnostic",
+      "label_default": "Diagnostic",
+      "definition_default": "Diagnostic"
+    },
+    {
+      "type":"TYPE_VISITE",
+      "cd_nomenclature": "INTERVENTION",
+      "mnemonique": "Intervention",
+      "label_default": "Intervention",
+      "definition_default": "Intervention"
+    },
+    {
+      "type": "PRATIQUE_GESTION",
+      "cd_nomenclature": "AMENDEMENT",
+      "mnemonique": "Amendement",
+      "label_default": "Amendement",
+      "definition_default": "Amendement"
+    },
+    {
+      "type": "PRATIQUE_GESTION",
+      "cd_nomenclature": "AUCUNE_GESTION",
+      "mnemonique": "Aucune gestion",
+      "label_default": "Aucune gestion",
+      "definition_default": "Aucune gestion"
+    },
+    {
+      "type": "PRATIQUE_GESTION",
+      "cd_nomenclature": "AUTRE",
+      "mnemonique": "Autre",
+      "label_default": "Autre",
+      "definition_default": "Autre"
+    },
+    {
+      "type": "PRATIQUE_GESTION",
+      "cd_nomenclature": "BROYAGE",
+      "mnemonique": "Broyage",
+      "label_default": "Broyage",
+      "definition_default": "Broyage"
+    },
+    {
+      "type": "PRATIQUE_GESTION",
+      "cd_nomenclature": "ENTRETIEN_DIGUE",
+      "mnemonique": "Entretien de la digue",
+      "label_default": "Entretien de la digue",
+      "definition_default": "Entretien de la digue"
+    },
+    {
+      "type": "PRATIQUE_GESTION",
+      "cd_nomenclature": "ENTRETIEN_VEGET_AQUATIQUE",
+      "mnemonique": "Entretien de la végétation aquatique",
+      "label_default": "Entretien de la végétation aquatique",
+      "definition_default": "Entretien de la végétation aquatique"
+    },
+    {
+      "type": "PRATIQUE_GESTION",
+      "cd_nomenclature": "ENTRETIEN_ABORDS",
+      "mnemonique": "Entretien des abords",
+      "label_default": "Entretien des abords",
+      "definition_default": "Entretien des abords (haie, ripisylve, etc.)"
+    },
+    {
+      "type": "PRATIQUE_GESTION",
+      "cd_nomenclature": "ENTRETIEN_FOSSE",
+      "mnemonique": "Entretien du fossé",
+      "label_default": "Entretien du fossé",
+      "definition_default": "Entretien du fossé"
+    },
+    {
+      "type": "PRATIQUE_GESTION",
+      "cd_nomenclature": "FAUCHE",
+      "mnemonique": "Fauche",
+      "label_default": "Fauche",
+      "definition_default": "Fauche"
+    },
+    {
+      "type": "PRATIQUE_GESTION",
+      "cd_nomenclature": "FERTILISATION",
+      "mnemonique": "Fertilisation",
+      "label_default": "Fertilisation",
+      "definition_default": "Fertilisation (azote, phosphore, etc.)"
+    },
+    {
+      "type": "PRATIQUE_GESTION",
+      "cd_nomenclature": "GESTION_ESPECES_INVAVISE",
+      "mnemonique": "Gestion des espèces invasives",
+      "label_default": "Gestion des espèces invasives",
+      "definition_default": "Gestion des espèces invasives"
+    },
+    {
+      "type": "PRATIQUE_GESTION",
+      "cd_nomenclature": "MISE_EN_DEFENSE",
+      "mnemonique": "Mise en défense",
+      "label_default": "Mise en défense",
+      "definition_default": "Mise en défense"
+    },
+    {
+      "type": "PRATIQUE_GESTION",
+      "cd_nomenclature": "PATURAGE",
+      "mnemonique": "Pâturage",
+      "label_default": "Pâturage",
+      "definition_default": "Pâturage"
+    },
+    {
+      "type":"PRATIQUE_GESTION",
+      "cd_nomenclature": "SEMIS",
+      "mnemonique": "Semis",
+      "label_default": "Semis",
+      "definition_default": "Semis"
+    },
+    {
+      "type":"PRATIQUE_GESTION",
+      "cd_nomenclature": "TRAITEMENT_PHYTOSANITAIRES",
+      "mnemonique": "Traitement phytosanitaires",
+      "label_default": "Traitement phytosanitaires",
+      "definition_default": "Traitement phytosanitaires"
+    },
+    {
+      "type":"PRATIQUE_GESTION",
+      "cd_nomenclature": "TRAVAIL_DU_SOL",
+      "mnemonique": "Travail du sol",
+      "label_default": "Travail du sol",
+      "definition_default": "Travail du sol"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "DIMINUTION_APPORT",
+      "mnemonique": "Diminution des apports",
+      "label_default": "Diminution des apports",
+      "definition_default": "Diminution des apports"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "DIMINUTION_CHARGEMENT",
+      "mnemonique": "Diminution du chargement",
+      "label_default": "Diminution du chargement",
+      "definition_default": "Diminution du chargement"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "ENTRETIEN_PONCTUEL",
+      "mnemonique": "Entretien ponctuel",
+      "label_default": "Entretien ponctuel",
+      "definition_default": "Entretien ponctuel"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "EXPLOITATION_LIGNEUX",
+      "mnemonique": "Exploitation des ligneux",
+      "label_default": "Exploitation des ligneux",
+      "definition_default": "Exploitation des ligneux"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "GESTION_ESPECES_INVAVISE",
+      "mnemonique": "Gestion des espèces invasives",
+      "label_default": "Gestion des espèces invasives",
+      "definition_default": "Gestion des espèces invasives"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "GESTION_USAGES",
+      "mnemonique": "Gestion des usages",
+      "label_default": "Gestion des usages",
+      "definition_default": "Gestion des usages"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "INVENTAIRE_COMPLEMENTAIRE",
+      "mnemonique": "Inventaire complémentaire",
+      "label_default": "Inventaire complémentaire",
+      "definition_default": "Inventaire complémentaire"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "NETTOYAGE",
+      "mnemonique": "Nettoyage",
+      "label_default": "Nettoyage",
+      "definition_default": "Nettoyage"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "NON_INTERVENTION",
+      "mnemonique": "Non intervention",
+      "label_default": "Non intervention",
+      "definition_default": "Non intervention"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "OUVERTURE",
+      "mnemonique": "Ouverture",
+      "label_default": "Ouverture",
+      "definition_default": "Ouverture"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "PRELEVEMENT_POISSONS",
+      "mnemonique": "Prélévement de poissons",
+      "label_default": "Prélévement de poissons",
+      "definition_default": "Prélévement de poissons"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "RESTAURATION_HYDRAULIQUE",
+      "mnemonique": "Restauration hydraulique",
+      "label_default": "Restauration hydraulique",
+      "definition_default": "Restauration hydraulique"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "SUVI",
+      "mnemonique": "Suvi",
+      "label_default": "Suvi",
+      "definition_default": "Suvi"
+    },
+    {
+      "type":"PRECONISATIONS",
+      "cd_nomenclature": "AUTRES",
+      "mnemonique": "Autres",
+      "label_default": "Autres",
+      "definition_default": "Autres"
+    },
+    {
+      "type":"SUITE_A_DONNER_CAT",
+      "cd_nomenclature": "AUCUNE",
+      "mnemonique": "Aucune",
+      "label_default": "Aucune",
+      "definition_default": "Aucune"
+    },
+    {
+      "type":"SUITE_A_DONNER_CAT",
+      "cd_nomenclature": "TRAVAUX",
+      "mnemonique": "Travaux",
+      "label_default": "Travaux",
+      "definition_default": "Travaux"
+    },
+    {
+      "type":"SUITE_A_DONNER_CAT",
+      "cd_nomenclature": "SUIVI",
+      "mnemonique": "Suivi",
+      "label_default": "Suivi",
+      "definition_default": "Suivi"
+    },
+    {
+      "type": "ACTION_CAT",
+      "cd_nomenclature": "CAHIER_CHARGE",
+      "mnemonique": "Cahier des charges",
+      "label_default": "Cahier des charges",
+      "definition_default": "Cahier des charges"
+    },
+    {
+      "type": "ACTION_CAT",
+      "cd_nomenclature": "RECEPTION_TRAVAUX",
+      "mnemonique": "Reception de travaux",
+      "label_default": "Reception de travaux",
+      "definition_default": "Reception de travaux"
+    },
+    {
+      "type": "ACTION_CAT",
+      "cd_nomenclature": "SUIVI_TRAVAUX",
+      "mnemonique": "Suivi de travaux",
+      "label_default": "Suivi de travaux",
+      "definition_default": "Suivi de travaux"
+    },
+    {
+      "type": "ACTION_CAT",
+      "cd_nomenclature": "ENCADREMENT_TRAVAUX",
+      "mnemonique": "Encadrement de travaux",
+      "label_default": "Encadrement de travaux",
+      "definition_default": "Encadrement de travaux"
+    },
+    {
+      "type": "ACTION_CAT",
+      "cd_nomenclature": "TRAVAUX_REGIE",
+      "mnemonique": "Travaux en regie",
+      "label_default": "Travaux en regie",
+      "definition_default": "Travaux en regie"
+    },
+    {
+      "type": "ACTION_CAT",
+      "cd_nomenclature": "CHANTIER_BENEVOLE",
+      "mnemonique": "Chantier benevole",
+      "label_default": "Chantier benevole",
+      "definition_default": "Chantier benevole"
+    },
+    {
+      "type": "NATURE_TRAVAUX",
+      "cd_nomenclature": "CURAGE",
+      "mnemonique": "Curage",
+      "label_default": "Curage",
+      "definition_default": "Curage"
+    },
+    {
+      "type": "NATURE_TRAVAUX",
+      "cd_nomenclature": "COMBLEMENT_DRAIN",
+      "mnemonique": "Comblement de drain",
+      "label_default": "Comblement de drain",
+      "definition_default": "Comblement de drain"
+    },
+    {
+      "type": "NATURE_TRAVAUX",
+      "cd_nomenclature": "ELAGAGE",
+      "mnemonique": "Elagage",
+      "label_default": "Elagage",
+      "definition_default": "Elagage"
+    },
+    {
+      "type": "NATURE_TRAVAUX",
+      "cd_nomenclature": "REPROFILAGE_BERGES",
+      "mnemonique": "Reprofilage des berges",
+      "label_default": "Reprofilage des berges",
+      "definition_default": "Reprofilage des berges"
+    },
+    {
+      "type": "NATURE_TRAVAUX",
+      "cd_nomenclature": "GESTION_VEGET_AQUATIQUE",
+      "mnemonique": "Gestion de la végétation aquatique",
+      "label_default": "Gestion de la végétation aquatique",
+      "definition_default": "Gestion de la végétation aquatique"
+    },
+    {
+      "type": "NATURE_TRAVAUX",
+      "cd_nomenclature": "ARRACHAGE_EEE",
+      "mnemonique": "Arrachage d'EEE",
+      "label_default": "Arrachage d'EEE",
+      "definition_default": "Arrachage d'EEE"
+    }
+  ]
+}
