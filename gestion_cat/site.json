@@ -36,7 +36,7 @@
       "attribut_label": "Conseiller CAT",
       "type_widget": "observers",
       "type_util": "user",
-      "code_list": "liste_conseiller_cat",
+      "api": "users/menu_from_code/liste_conseiller_cat",
       "application": "GeoNature",
       "keyValue": "id_role",
       "keyLabel": "nom_complet",
