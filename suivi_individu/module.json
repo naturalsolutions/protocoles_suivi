@@ -1,0 +1,20 @@
+{
+    "module_label":"Suivi Individu",
+    "module_desc":"Module de test individus",
+    "specific": {
+      "id_list_taxonomy": {
+      "type_widget": "datalist",
+      "attribut_label": "Liste des taxons",
+      "keyValue": "id_liste",
+      "keyLabel": "nom_liste",
+      "multiple": false,
+      "api" : "biblistes/",
+      "application": "TaxHub",
+      "required": false,
+      "hidden": true,
+      "type_util": "taxonomy_list",
+      "data_path": "data",
+      "definition": "Liste des taxons. À gérer dans TaxHub."
+    }
+    }
+}
